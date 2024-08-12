@@ -82,8 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "35b0ee6e568b5c58",
@@ -168,7 +167,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d63266cdc4b20c94",
+  "active": "e2ef9c6ccf7dba7b",
   "lastOpenFiles": [
     "Commandline Magic/NVIM/NVim.md",
     "Commandline Magic/Git.md",
