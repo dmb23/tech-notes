@@ -1,0 +1,3 @@
+- [ ] Create initial Python Repo for Project
+	- [ ] include README to collect plan
+- [ ] Collect tech notes in Obsidian
