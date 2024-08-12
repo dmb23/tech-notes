@@ -8,54 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "bb6ea9ee721e5baa",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Tools/Meltano - Open Source Data Integration.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "56865705011f60e2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Web Services/brainboard - Visual Terraform Management.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "0ee6489a8796daa8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Resources/Information Resources.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "4bc342ee13c5c770",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Python Stuff/Managing Versions.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "7860a2b77df22a05",
             "type": "leaf",
             "state": {
@@ -80,7 +32,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -130,7 +82,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "35b0ee6e568b5c58",
@@ -147,7 +100,7 @@
               "type": "backlink",
               "state": {
                 "file": "Commandline Magic/NVIM/NVim.md",
-                "collapseAll": false,
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
@@ -189,13 +142,21 @@
                 "file": "Commandline Magic/NVIM/NVim.md"
               }
             }
+          },
+          {
+            "id": "d63266cdc4b20c94",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -207,7 +168,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e2ef9c6ccf7dba7b",
+  "active": "d63266cdc4b20c94",
   "lastOpenFiles": [
     "Commandline Magic/NVIM/NVim.md",
     "Commandline Magic/Git.md",

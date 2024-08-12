@@ -12,7 +12,7 @@ Careful: Vim plugins (Mason) can install Python packages (Ruff) into your curren
 	- nvim-dap-ui
 	- nvim-dap-virtual-text
 	- nvim-dap-python
-- [ ] look into oil.nvim
+- [x] look into oil.nvim
 - [ ] undestand treesitter?
 - [ ] understand buffers / windows
 # Keymaps
