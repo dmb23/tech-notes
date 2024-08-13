@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Commandline Magic/NVIM/NVim.md",
+                "file": "Resources/Information Resources.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Commandline Magic/NVIM/NVim.md",
+                "file": "Resources/Information Resources.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Commandline Magic/NVIM/NVim.md",
+                "file": "Resources/Information Resources.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Commandline Magic/NVIM/NVim.md"
+                "file": "Resources/Information Resources.md"
               }
             }
           },
@@ -169,6 +169,8 @@
   },
   "active": "e2ef9c6ccf7dba7b",
   "lastOpenFiles": [
+    "Overview.md",
+    "Python Stuff/Managing Versions.md",
     "Commandline Magic/NVIM/NVim.md",
     "Commandline Magic/Git.md",
     "Commandline Magic/NVIM",
@@ -176,7 +178,6 @@
     "ML Stuff/Running LLMs locally.md",
     "ML Stuff/HowTo - Fine tune Llama3.1.md",
     "ML Stuff/Fireworks.ai - cheap inference & training.md",
-    "Python Stuff/Managing Versions.md",
     "Resources/Information Resources.md",
     "Python Stuff",
     "ML Stuff",
@@ -193,7 +194,6 @@
     "Web Services",
     "Tools.md",
     "Tools/Untitled",
-    "Tools",
-    "Overview.md"
+    "Tools"
   ]
 }
