@@ -30,6 +30,14 @@ Careful: Vim plugins (Mason) can install Python packages (Ruff) into your curren
 - Autocomplete:
 	- `<C-n>` / `<C-p>` next / previous completion option
 	- `<C-y>` select completion option
+- `<Leader><Leader>` search buffers
+- `<Leader>rn` rename symbol
+- `<Leader>ds` document symbols (overview of all symbols in buffer)
+- `<Leader>s` search ...
+	- `h` help
+	- `f` files (in workspace)
+	- `n` Neovim files
+	- `k` keymaps
 
 # Plugins
 - `lazy` plugin manager
