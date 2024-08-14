@@ -1,5 +1,5 @@
 # Getting started
-Careful: Vim plugins (Mason) can install Python packages (Ruff) into your current environment
+>[!WARNING] Careful: Vim plugins (Mason) can install Python packages (Ruff) into your current environment
 ### Mac
 - `brew install nvim ripgrep`
 - install a [NerdFont](https://www.nerdfonts.com/#home)
