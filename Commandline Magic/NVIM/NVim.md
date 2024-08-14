@@ -7,7 +7,7 @@ Careful: Vim plugins (Mason) can install Python packages (Ruff) into your curren
 - install [kickstart](https://github.com/nvim-lua/kickstart.nvim)
 
 # TODO
-- [ ] look into debugging
+- [x] look into debugging
 	- nvim-dap
 	- nvim-dap-ui
 	- nvim-dap-virtual-text
