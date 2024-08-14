@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Commandline Magic/NVIM/NVim.md",
+                "file": "Commandline Magic/lazygit.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Commandline Magic/NVIM/NVim.md",
+                "file": "Commandline Magic/lazygit.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Commandline Magic/NVIM/NVim.md",
+                "file": "Commandline Magic/lazygit.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Commandline Magic/NVIM/NVim.md"
+                "file": "Commandline Magic/lazygit.md"
               }
             }
           },
@@ -169,11 +169,12 @@
   },
   "active": "e2ef9c6ccf7dba7b",
   "lastOpenFiles": [
-    "dRAGtor.md",
     "Commandline Magic/NVIM/NVim.md",
+    "Commandline Magic/Git.md",
+    "Commandline Magic/lazygit.md",
+    "dRAGtor.md",
     "Resources/Information Resources.md",
     "Python Stuff/Managing Versions.md",
-    "Commandline Magic/Git.md",
     "Commandline Magic/NVIM",
     "Commandline Magic",
     "ML Stuff/Running LLMs locally.md",
