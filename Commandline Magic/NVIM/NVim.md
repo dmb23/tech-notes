@@ -18,11 +18,6 @@
 - [ ] understand buffers / windows
 # Keymaps
 
-- `:e $MYVIMRC`
-- `<leader>s` search
-	- `<leader>sh` search help
-	- `<leader>sk` search keymaps
-	- ...
 - `gd` / `gr`go to definition / reference
 	- `^T` go back
 - `[d` / `]d` previous / next Diagnostic Mesage (error)
@@ -33,15 +28,22 @@
 	- `<C-y>` select completion option
 - `<Leader><Leader>` search buffers
 - `<Leader>rn` rename symbol
-- `<Leader>ds` document symbols (overview of all symbols in buffer)
+- `<Leader>cs` document symbols (overview of all symbols in buffer)
 - `<Leader>s` search ...
 	- `h` help
 	- `f` files (in workspace)
 	- `n` Neovim files
 	- `k` keymaps
-
+	- `s` symbols (emojis, Icons)
+- `<C-t>` Toggle
+	- `t` terminal
+	- `l` lazygit
+- `<leader>d` debug things
+	- `<leader>dm` debug method (Python)
 # Plugins
 - `lazy` plugin manager
 - `which-key`
 - `telescope` fuzzy finder
 	- `:help telescope.builtin`
+- `toggleterm`
+	- use it with [[lazygit]] for nice git interface
