@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Commandline Magic/NVIM/NVim.md",
+                "file": "ML Stuff/Flux.1 Image Generation Model.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Commandline Magic/NVIM/NVim.md",
+                "file": "ML Stuff/Flux.1 Image Generation Model.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Commandline Magic/NVIM/NVim.md",
+                "file": "ML Stuff/Flux.1 Image Generation Model.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Commandline Magic/NVIM/NVim.md"
+                "file": "ML Stuff/Flux.1 Image Generation Model.md"
               }
             }
           },
@@ -169,10 +169,11 @@
   },
   "active": "e2ef9c6ccf7dba7b",
   "lastOpenFiles": [
+    "ML Stuff/Flux.1 Image Generation Model.md",
+    "Commandline Magic/NVIM/NVim.md",
     "Python Stuff/Managing Versions.md",
     "Resources/Information Resources.md",
     "Commandline Magic/lazygit.md",
-    "Commandline Magic/NVIM/NVim.md",
     "Commandline Magic/Git.md",
     "dRAGtor.md",
     "Commandline Magic/NVIM",
