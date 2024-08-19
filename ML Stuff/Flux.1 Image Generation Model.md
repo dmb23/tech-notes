@@ -1,6 +1,9 @@
 # Timings
 - `schnell` - 968 * 544 - 3min 20 sec
-- `schnell` - 1920 * 1080 - 
+- `schnell` - 1025 * 7?? - 5min
+- `schnell` - 1920 * 1080 - breaks memory
+# Performance Hacks
+- `PYTORCH_MPS_HIGH_WATERMARK_RATIO=2.0` allows to build bigger images
 # "Works on my machine"
 
 To set up the environment that lets me run the script:
