@@ -1,3 +1,6 @@
+# Timings
+- `schnell` - 968 * 544 - 3min 20 sec
+- `schnell` - 1920 * 1080 - 
 # "Works on my machine"
 
 To set up the environment that lets me run the script:
