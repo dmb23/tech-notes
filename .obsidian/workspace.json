@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML Stuff/Flux.1 Image Generation Model.md",
+                "file": "ML Stuff/Attention/Attention.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ML Stuff/Flux.1 Image Generation Model.md",
+                "file": "ML Stuff/Attention/Attention.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ML Stuff/Flux.1 Image Generation Model.md",
+                "file": "ML Stuff/Attention/Attention.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ML Stuff/Flux.1 Image Generation Model.md"
+                "file": "ML Stuff/Attention/Attention.md"
               }
             }
           },
@@ -169,8 +169,11 @@
   },
   "active": "e2ef9c6ccf7dba7b",
   "lastOpenFiles": [
-    "Python Stuff/Managing Versions.md",
+    "ML Stuff/Running LLMs locally.md",
+    "ML Stuff/Attention/Attention.md",
     "ML Stuff/Flux.1 Image Generation Model.md",
+    "ML Stuff/Attention",
+    "Python Stuff/Managing Versions.md",
     "Commandline Magic/NVIM/NVim.md",
     "Resources/Information Resources.md",
     "Commandline Magic/lazygit.md",
@@ -178,7 +181,6 @@
     "dRAGtor.md",
     "Commandline Magic/NVIM",
     "Commandline Magic",
-    "ML Stuff/Running LLMs locally.md",
     "ML Stuff/HowTo - Fine tune Llama3.1.md",
     "ML Stuff/Fireworks.ai - cheap inference & training.md",
     "Python Stuff",
@@ -195,7 +197,6 @@
     "Web Services/Untitled",
     "Web Services",
     "Tools.md",
-    "Tools/Untitled",
-    "Tools"
+    "Tools/Untitled"
   ]
 }
