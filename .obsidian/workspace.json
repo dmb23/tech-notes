@@ -151,7 +151,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -167,7 +167,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e2ef9c6ccf7dba7b",
+  "active": "afa21e114122cd1e",
   "lastOpenFiles": [
     "ML Stuff/Running LLMs locally.md",
     "ML Stuff/Attention/Attention.md",
