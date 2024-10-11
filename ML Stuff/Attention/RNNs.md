@@ -27,3 +27,13 @@ $$ P(x_1, ..., x_T) = P(x_1)\prod_{t=2}^T P(x_t|x_{t-1}, ..., x_1) $$
 ### Markov Models
 When we assume that the next step only depends on the recent history, ($\tau$ steps), we arrive at Markov models. For a first-order Markov model ($\tau=1$) the joint probability becomes
 $$ P(x_1, ..., x_T) = P(x_1) \prod_{t=2}^T P(x_t|x_{t-1]})$$ 
+# Text modelling
+
+## Text to Sequence
+
+- convert parts of the text (letters, words, parts of words) to indices, then any text becomes a nice sequence of numbers
+- word frequency:
+	- by far the highest frequency have stop words (the, a, of, to, ...)
+	- word frequency is a straight line on a log-log plot (Zipf's law)
+		- frequency $n_i$ of the $i^{th}$ most frequent word is $n_i \propto \frac{1}{i^\alpha}$ 
+	- bigram or trigram frequency follows similar law, with lower
