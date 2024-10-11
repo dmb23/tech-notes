@@ -36,4 +36,5 @@ $$ P(x_1, ..., x_T) = P(x_1) \prod_{t=2}^T P(x_t|x_{t-1]})$$
 	- by far the highest frequency have stop words (the, a, of, to, ...)
 	- word frequency is a straight line on a log-log plot (Zipf's law)
 		- frequency $n_i$ of the $i^{th}$ most frequent word is $n_i \propto \frac{1}{i^\alpha}$ 
-	- bigram or trigram frequency follows similar law, with lower
+	- bigram or trigram frequency follows similar law, with lower exponent
+	- much lower number of distinct n-grams
