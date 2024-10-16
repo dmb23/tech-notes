@@ -94,7 +94,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "35b0ee6e568b5c58",
@@ -167,7 +168,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -179,7 +181,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "5aa897ccc002de14",
+  "active": "afa21e114122cd1e",
   "lastOpenFiles": [
     "ML Stuff/Attention/RNNs.md",
     "Isiyana PR review.md",
