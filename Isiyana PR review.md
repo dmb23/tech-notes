@@ -2,4 +2,9 @@
 - working with git:
 	- other PR?
 	- commit small, commit often
-	- 
+	- commit messages...
+- run_setup / setup.sh ???
+- `transcribe`
+	- logic flow
+	- no return for exceptions
+- separate config and code (default arguments in function signature)
