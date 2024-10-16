@@ -1,0 +1,5 @@
+- credentials: that is fucked. Never do that!
+- working with git:
+	- other PR?
+	- commit small, commit often
+	- 

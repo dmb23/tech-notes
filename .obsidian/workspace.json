@@ -30,9 +30,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "5aa897ccc002de14",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Isiyana PR review.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -98,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ML Stuff/Attention/RNNs.md",
+                "file": "Isiyana PR review.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ML Stuff/Attention/RNNs.md",
+                "file": "Isiyana PR review.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ML Stuff/Attention/RNNs.md"
+                "file": "Isiyana PR review.md"
               }
             }
           },
@@ -167,10 +179,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e2ef9c6ccf7dba7b",
+  "active": "5aa897ccc002de14",
   "lastOpenFiles": [
-    "ML Stuff/Attention/Attention.md",
     "ML Stuff/Attention/RNNs.md",
+    "Isiyana PR review.md",
+    "ML Stuff/Attention/Attention.md",
     "ML Stuff/Running LLMs locally.md",
     "ML Stuff/Flux.1 Image Generation Model.md",
     "ML Stuff/Attention",
