@@ -9,3 +9,7 @@
 Regularization techniques try to avoid overfitting when only limited data is available
 
 - *weight decay:* add the norm of the weight vector to the loss function 
+
+## Activation function
+
+- *softmax* $$\begin{align*} \hat{\bm{y}} &= \text{softmax}(\bm{o}) \\ \hat{y_i} &= \frac{\exp(o_i)}{\sum_j \exp(o_j)} \end{align*}$$
