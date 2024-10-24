@@ -29,7 +29,7 @@
               "state": {
                 "file": "ML Stuff/Basics/Deep Learning 101.md",
                 "mode": "source",
-                "source": false
+                "source": true
               },
               "icon": "lucide-file",
               "title": "Deep Learning 101"
