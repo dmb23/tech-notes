@@ -1,12 +1,8 @@
----
-$$
-\newcommad{\bm}[1]{\mathbf{ #1 }}
-$$
----
 # Basic Ideas
-- Input $\vec{x}$ , simple layer of a NN has weights $\vec{w}$ and bias $b$ to get the output $o = \vec{w} \cdot \vec{x} + b$ 
+- Input $\bm{x}$, single neuron of a NN has weights $\bm{w}$ and bias $b$ to get the output $o = \bm{w} \cdot \bm{x} + b$ 
+- For a fully-connected layer with vector input and output, this becomes $\bm{o} = \bm{Wx} + \bm{b}$
 - update weights and bias via gradient descent
-	- measure loss as $l_2$ norm:  $L(\vec{w}, b) =  \| \vec{o} - \vec{y} \|_2^2$ 
+	- measure loss as $l_2$ norm:  $L(\bm{w}, b) =  \| \bm{o} - \bm{y} \|_2^2$ 
 
 ## Regularization
 
