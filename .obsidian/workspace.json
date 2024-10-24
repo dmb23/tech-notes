@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML Stuff/Attention/RNNs.md",
+                "file": "ML Stuff/Basics/Deep Learning 101.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "RNNs"
+              "title": "Deep Learning 101"
             }
           }
         ],
@@ -190,15 +190,17 @@
   },
   "active": "e2ef9c6ccf7dba7b",
   "lastOpenFiles": [
-    "Isiyana PR review.md",
+    "Resources/Information Resources.md",
+    "ML Stuff/Basics/Deep Learning 101.md",
+    "ML Stuff/Basics",
+    "Python Stuff/Managing Versions.md",
     "ML Stuff/Attention/RNNs.md",
+    "Isiyana PR review.md",
     "ML Stuff/Attention/Attention.md",
     "ML Stuff/Running LLMs locally.md",
     "ML Stuff/Flux.1 Image Generation Model.md",
     "ML Stuff/Attention",
-    "Python Stuff/Managing Versions.md",
     "Commandline Magic/NVIM/NVim.md",
-    "Resources/Information Resources.md",
     "Commandline Magic/lazygit.md",
     "Commandline Magic/Git.md",
     "dRAGtor.md",
@@ -219,7 +221,6 @@
     "Web Services/Ploomber - App Deployment.md",
     "Web Services/Untitled",
     "Web Services",
-    "Tools.md",
-    "Tools/Untitled"
+    "Tools.md"
   ]
 }
