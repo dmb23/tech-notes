@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML Stuff/Basics/Deep Learning 101.md",
+                "file": "ML Stuff/Basics/Fancy stuff.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Deep Learning 101"
+              "title": "Fancy stuff"
             }
           }
         ]
@@ -139,10 +139,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ML Stuff/Basics/Deep Learning 101.md"
+                "file": "ML Stuff/Basics/Fancy stuff.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of Deep Learning 101"
+              "title": "Outline of Fancy stuff"
             }
           },
           {
@@ -174,8 +174,9 @@
   },
   "active": "7860a2b77df22a05",
   "lastOpenFiles": [
-    "ML Stuff/Running LLMs locally.md",
     "ML Stuff/Basics/Deep Learning 101.md",
+    "ML Stuff/Basics/Fancy stuff.md",
+    "ML Stuff/Running LLMs locally.md",
     "preamble.sty",
     "Resources/Information Resources.md",
     "ML Stuff/Basics",
