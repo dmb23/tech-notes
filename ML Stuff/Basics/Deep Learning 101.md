@@ -1,8 +1,14 @@
 # Basic Ideas
 - Input $\bm{x}$, single neuron of a NN has weights $\bm{w}$ and bias $b$ to get the output $o = \bm{w} \cdot \bm{x} + b$ 
-- For a fully-connected layer with vector input and output, this becomes $\bm{o} = \bm{Wx} + \bm{b}$
+- For a fully-connected layer with vector input and output, this becomes $\bm{o} = \bm{Wx} + \bm{b}$. If we have $n_{in}$ different features and want to obtain $n_{out}$ different outputs, then 
+	- $\bm{o} \in \mathbb{R}^{n_{out}}$
+	- $\bm{x} \in \mathbb{R}^{n_{in}}$
+	- $\bm{b} \in \mathbb{R}^{n_{out}}$
+	- $\bm{W} \in \mathbb{R}^{n_{out} \times n_{in}}$ 
 - update weights and bias via gradient descent
+	- *squared error* between 
 	- measure loss as $l_2$ norm:  $L(\bm{w}, b) =  \| \bm{o} - \bm{y} \|_2^2$ 
+	- 
 
 ## Regularization
 
