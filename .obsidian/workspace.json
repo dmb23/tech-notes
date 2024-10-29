@@ -139,10 +139,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ML Stuff/Attention/RNNs.md"
+                "file": "ML Stuff/Basics/Deep Learning 101.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of RNNs"
+              "title": "Outline of Deep Learning 101"
             }
           },
           {
@@ -160,8 +160,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
