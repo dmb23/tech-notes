@@ -21,6 +21,7 @@
 Regularization techniques try to avoid overfitting when only limited data is available
 
 - *weight decay:* add the norm of the weight vector to the loss function 
+- *dropout* randomly set activations to zero during training
 
 ## Activation Functions
 - **softmax** for single-category classification $\hat{y_i} = \tfrac{\exp(o_i)}{\sum_j \exp(o_j)}$
@@ -32,7 +33,8 @@ Regularization techniques try to avoid overfitting when only limited data is ava
 - **cross-entropy loss**, default for classification problems: $l(\bm{y}, \bm{\hat{y}}) = - \sum_i y_i \log \hat{y}_i$
 
 ## Initialization
-
+- Initialize weights radomly to break symmetry
+- scale the variance of the initial distributions to constrain the variance for outputs & gradients
 # Classification
 
 - Use One-Hot encoding for $n_{out}$ labels into an $n_{out}$-dim Vector
