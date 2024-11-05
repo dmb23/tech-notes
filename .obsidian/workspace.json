@@ -13,15 +13,35 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML Stuff/Basics/Deep Learning 101.md",
+                "file": "Paper/Reproducible data science over data lakes - replayable datapipelines with Bauplan and Nessie.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Deep Learning 101"
+              "title": "Reproducible data science over data lakes - replayable datapipelines with Bauplan and Nessie"
+            }
+          },
+          {
+            "id": "dd02064dc9bb6921",
+            "type": "leaf",
+            "state": {
+              "type": "kanban",
+              "state": {
+                "file": "Project Ideas.md",
+                "kanbanViewState": {
+                  "kanban-plugin": "board",
+                  "list-collapse": [
+                    false,
+                    false
+                  ]
+                }
+              },
+              "icon": "lucide-trello",
+              "title": "Project Ideas"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -139,10 +159,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ML Stuff/Basics/Deep Learning 101.md"
+                "file": "Project Ideas.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of Deep Learning 101"
+              "title": "Outline of Project Ideas"
             }
           },
           {
@@ -169,18 +189,22 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "obsidian-kanban:Create new board": false
     }
   },
-  "active": "7860a2b77df22a05",
+  "active": "dd02064dc9bb6921",
   "lastOpenFiles": [
-    "ML Stuff/Basics/Fancy stuff.md",
+    "Untitled Kanban.md",
+    "Project Ideas.md",
+    "Paper/Reproducible data science over data lakes - replayable datapipelines with Bauplan and Nessie.md",
+    "Python Stuff/Managing Versions.md",
     "ML Stuff/Basics/Deep Learning 101.md",
+    "ML Stuff/Basics/Fancy stuff.md",
     "ML Stuff/Running LLMs locally.md",
     "preamble.sty",
     "Resources/Information Resources.md",
     "ML Stuff/Basics",
-    "Python Stuff/Managing Versions.md",
     "ML Stuff/Attention/RNNs.md",
     "Isiyana PR review.md",
     "ML Stuff/Attention/Attention.md",
@@ -199,7 +223,6 @@
     "Tools/DLT - Python-first data load tool.md",
     "Tools/Meltano - Open Source Data Integration.md",
     "Tools/Nessie - Catalog for Data Lakes.md",
-    "Paper/Reproducible data science over data lakes - replayable datapipelines with Bauplan and Nessie.md",
     "Web Services/Retool - Visual App Creation.md",
     "Paper",
     "Web Services/brainboard - Visual Terraform Management.md",
