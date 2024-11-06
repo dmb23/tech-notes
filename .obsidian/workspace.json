@@ -40,9 +40,21 @@
               "icon": "lucide-file",
               "title": "goask - Podcast Information in Golang"
             }
+          },
+          {
+            "id": "39a39ddac2a33d76",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.7.5"
+              },
+              "icon": "lucide-file",
+              "title": "Release Notes 1.7.5"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -194,7 +206,7 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "8e41461d45d0b5b1",
+  "active": "39a39ddac2a33d76",
   "lastOpenFiles": [
     "Project Ideas/Project Board.md",
     "Project Ideas/goask - Podcast Information in Golang.md",
