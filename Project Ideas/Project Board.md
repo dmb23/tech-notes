@@ -6,9 +6,8 @@ kanban-plugin: board
 
 ## golang-based podcast summaries
 
-- [ ] Create a tiny Web App in Go `go-app`
-- [ ] Persist configuration `cobra`?
 - [ ] Allow to search for a podcast name, and get a list of episodes
+- [ ] Persist configuration `cobra`?
 - [ ] Be able to tick episodes and download those
 - [ ] call ffmpeg and whisper externally to transcribe those?
 - [ ] allow to ask a question via `local-ai`
@@ -25,10 +24,15 @@ kanban-plugin: board
 
 
 
+## Done
+
+- [ ] Create a tiny Web App in Go `go-app`
+
+
 
 
 %% kanban:settings
 ```
-{"kanban-plugin":"board","list-collapse":[false,false,false]}
+{"kanban-plugin":"board","list-collapse":[false,false,false,false]}
 ```
 %%
