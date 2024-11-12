@@ -38,3 +38,11 @@ $$ P(x_1, ..., x_T) = P(x_1) \prod_{t=2}^T P(x_t|x_{t-1]})$$
 		- frequency $n_i$ of the $i^{th}$ most frequent word is $n_i \propto \frac{1}{i^\alpha}$ 
 	- bigram or trigram frequency follows similar law, with lower exponent
 	- much lower number of distinct n-grams
+
+## Probabilistic Language modeling
+It should be possible to model word probabilities by frequency approximations from a training set: $$\hat{P}(\text{learning} | \text{deep}) = \frac{n(\text{deep, learning})}{n(\text{deep})}$$
+- this will always run into issues with rare n-grams!
+	- rare n-grams are probable to not be present in the training set
+	- then frequency estimations will be meaningless
+- Frequency approximations are unable to include meaning, that certain words should preferably appear in similar contexts
+- 
