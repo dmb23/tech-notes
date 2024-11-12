@@ -31,21 +31,14 @@
             "id": "a802950939cad30b",
             "type": "leaf",
             "state": {
-              "type": "kanban",
+              "type": "markdown",
               "state": {
-                "file": "Project Ideas/Project Board.md",
-                "kanbanViewState": {
-                  "kanban-plugin": "board",
-                  "list-collapse": [
-                    false,
-                    false,
-                    false,
-                    false
-                  ]
-                }
+                "file": "ML Stuff/Attention/RNNs.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-trello",
-              "title": "Project Board"
+              "icon": "lucide-file",
+              "title": "RNNs"
             }
           }
         ],
@@ -167,10 +160,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Project Ideas/Project Board.md"
+                "file": "ML Stuff/Attention/RNNs.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of Project Board"
+              "title": "Outline of RNNs"
             }
           },
           {
@@ -203,13 +196,13 @@
   },
   "active": "a802950939cad30b",
   "lastOpenFiles": [
-    "Project Ideas/goask - Podcast Information in Golang.md",
+    "ML Stuff/Basics/Deep Learning 101.md",
     "Project Ideas/Project Board.md",
+    "Project Ideas/goask - Podcast Information in Golang.md",
     "Project Ideas",
     "Paper/Reproducible data science over data lakes - replayable datapipelines with Bauplan and Nessie.md",
     "Untitled Kanban.md",
     "Python Stuff/Managing Versions.md",
-    "ML Stuff/Basics/Deep Learning 101.md",
     "ML Stuff/Basics/Fancy stuff.md",
     "ML Stuff/Running LLMs locally.md",
     "preamble.sty",
