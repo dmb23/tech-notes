@@ -54,4 +54,5 @@ It should be possible to model word probabilities by frequency approximations fr
 # Partitioning Sequences
 If you have a corpus with number of tokens $T$, and want to train on sequence pairs (input - target) of fixed length $n$:
 - discard the first $d$ tokens where $d \in [0, n)$
-- partition the
+- partition the rest of the sequence successive sub-sequences of length $n$
+- randomly sample consecutive pairs of these sub-sequences for mini-batches
