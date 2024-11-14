@@ -15,5 +15,12 @@
 - **inputs** at time step t as a minibatch $\mathbf{X}_t \in \mathbb{R}^{n \times d}$   
 - **hidden layer output** at time step t $\bf{H}_t$ is calculated as $$\bf{H}_t = \phi (\bf{X}_t\bf{W}_{dh} + \bf{H}_{t-1}\bf{W}_{hh} + \bf{b}_h)$$
 	- $\bf{H_t} \in \mathbb{R}^{n \times h}$
-	- weights $\bf{W}_{dh} \in \mathbb{R}^{d \times h}$, $\bf{b}_{h} \in \mathbb{R}^{h}$  and $\phi$ the activation function
-- **output** $\mathbf{O}$ is calculated as $$\bf{O} = \bf{HW}_{hm} + \bf{b}_m)$$  with $\bf{O} \in \mathbb{R}^{n \times m}$, $\bf{W}_{hm} \in \mathbb{R}^{h \times m}$, $\bf{b}_{m} \in \mathbb{R}^{m}$ 
+	- weights $\bf{W}_{dh} \in \mathbb{R}^{d \times h}$ as weights for the input
+	- weights $\bf{W}_{hh} \in \mathbb{R}^{h \times h}$ as weights for the hidden state of the previous time step
+	- bias $\bf{b}_{h} \in \mathbb{R}^{h}$
+	- and $\phi$ the activation function
+- **output** $\mathbf{O}$ is calculated as $$\bf{O} = \bf{HW}_{hm} + \bf{b}_m$$  with $\bf{O} \in \mathbb{R}^{n \times m}$, $\bf{W}_{hm} \in \mathbb{R}^{h \times m}$, $\bf{b}_{m} \in \mathbb{R}^{m}$ 
+
+# Gradient Clipping
+
+when backpropagating gradients over time in a sequence, we get an $O(T)$ chain of matrix multiplications. Depending on the properties of the weight matrices, this can lead to vanishing or exploding gradient 
