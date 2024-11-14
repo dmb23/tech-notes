@@ -23,4 +23,14 @@
 
 # Gradient Clipping
 
-when backpropagating gradients over time in a sequence, we get an $O(T)$ chain of matrix multiplications. Depending on the properties of the weight matrices, this can lead to vanishing or exploding gradient 
+when backpropagating gradients over time in a sequence, we get an $O(T)$ chain of matrix multiplications. Depending on the properties of the weight matrices, this can lead to vanishing or exploding gradients.
+
+- Generally speaking, we update a parameter $\bf{x}$ by pushing it ini the direction of the negative gradient $\bf{g}$ with a learning rate $\eta > 0$: $$\bf{x} \leftarrow \bf{x} - \eta \bf{g}$$
+- The **gradient clipping** heuristic eliminates **exploding** gradients by projecting big gradients onto a ball of radius $\theta$  $$\bf{g} \leftarrow \min \left( 1, \frac{\theta}{\|\bf{g}\|}\right) \bf{g}$$
+
+
+# Backropagating through time
+
+- calculating gradients back through multiple time steps can lead to exploding / vanishing gradients / numerical instability
+- *heuristic* solution: do not calculate the full range of gradient contributions for all time steps, but truncate the calculation after $\tau$ steps.
+	- that means the model only accounts for short-term influence
