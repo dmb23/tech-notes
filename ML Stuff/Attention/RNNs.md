@@ -58,7 +58,13 @@ To build "deep" RNNs the simple approach is to stack RNNs on top of each other: 
 	- the **forget gate** $\bf{F}_t \in (0, 1)$ controls if the current value of the "memory" (= internal state) should be kept or deleted ("forgotten") $$\bf{F}_t = \sigma(\bf{X}_t\bf{W}_{xf} + \bf{H}_{t-1}\bf{W}_{hf}+\bf{b}_f))$$
 	- the **input gate** $\bf{I}_t \in (0, 1)$ controls if the candidate internal state should affect the "memory" (=be added tot he internal state) $$\bf{I}_t = \sigma(\bf{X}_t\bf{W}_{xi} + \bf{H}_{t-1}\bf{W}_{hi}+\bf{b}_i))$$
 	- the **output gate** $\bf{O}_t \in (0, 1)$ controls if the memory cell should impact the output of the current step based on its internal state or better rely more on the input alone $$\bf{O}_t = \sigma(\bf{X}_t\bf{W}_{xo} + \bf{H}_{t-1}\bf{W}_{ho}+\bf{b}_o))$$
-- **internal state** $\bf{C}_t$ is calculated as $$\bf{C}_t = \bf{F}_t \odot \$$
+- **internal state** $\bf{C}_t$ is calculated as $$\bf{C}_t = \bf{F}_t \odot \bf{C}_{t-1} + \bf{I}_t \odot \tilde{\bf{C}}_t$$
+	- the forget gate controls the contribution of the internal state from the earlier time step
+	- the input gate controls the contribution of the candidate internal state
+	- internal state is only passed to the next time step of the same memory cell
+- **hidden state** $\bf{H}_t$ is calculated as $$\bf{H}_t = \bf{O}_t \odot \tanh(\bf{C}_t)$$
+	- the output gate controls if the current memory impacts other layers of the network or not
+	- hidden state is is passed to both the next time step of the same memory cell and the downstream layers of the network!
 
 
 # Training Details
