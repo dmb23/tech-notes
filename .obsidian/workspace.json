@@ -194,12 +194,13 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "8e41461d45d0b5b1",
+  "active": "a802950939cad30b",
   "lastOpenFiles": [
+    "ML Stuff/images/LSTM-memory-cell.png",
+    "ML Stuff/Attention/RNNs.md",
     "ML Stuff/images/Deep-RNN.png",
     "ML Stuff/images/RNN-single-layer.png",
     "ML Stuff/images",
-    "ML Stuff/Attention/RNNs.md",
     "ML Stuff/Attention/Language Models.md",
     "ML Stuff/Basics/Deep Learning 101.md",
     "ML Stuff/Basics/Fancy stuff.md",

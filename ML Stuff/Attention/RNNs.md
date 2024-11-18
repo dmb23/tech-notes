@@ -45,11 +45,20 @@ To build "deep" RNNs the simple approach is to stack RNNs on top of each other: 
 
 # Modern RNN Cells
 ## LSTM - Long Short-Term Memory
-[[#Gradient Clipping]] can help with exploding gradients, but it did not solve vanishing gradients in deep networks. The intuition behind the name is
+[[#Gradient Clipping]] can help with exploding gradients, but it did not solve vanishing gradients in deep networks. LSTMs were build for that. The intuition behind the name is
 - RNNs have *long-term memory* in the form of weights. They change slowly during training and encode general knowledge about data
 - RNNs have *short-term memory* in the form of activations that are passed from each node to the next time step
 - The *memory cell* introduces an intermediate type of storage
 
+![[LSTM-memory-cell.png]]
+
+- each *memory cell* has **internal state** $\bf{C}_t$ in addition to the hidden state $\bf{H}_t$ 
+- each *memory cell* learns **4** different computations:
+	- the **input node** calculates the candidate internal state $\tilde{\bf{C}}_t \in (-1, 1)$ $$\tilde{\bf{C}}_t = \tanh(\bf{X}_T\bf{W}_{xc} + \bf{H}_{t-1}\bf{W}_{hc} + \bf{b}_c)$$
+	- the **forget gate** $\bf{F}_t \in (0, 1)$ controls if the current value of the "memory" (= internal state) should be kept or deleted ("forgotten") $$\bf{F}_t = \sigma(\bf{X}_t\bf{W}_{xf} + \bf{H}_{t-1}\bf{W}_{hf}+\bf{b}_f))$$
+	- the **input gate** $\bf{I}_t \in (0, 1)$ controls if the candidate internal state should affect the "memory" (=be added tot he internal state) $$\bf{I}_t = \sigma(\bf{X}_t\bf{W}_{xi} + \bf{H}_{t-1}\bf{W}_{hi}+\bf{b}_i))$$
+	- the **output gate** $\bf{O}_t \in (0, 1)$ controls if the memory cell should impact the output of the current step based on its internal state or better rely more on the input alone $$\bf{O}_t = \sigma(\bf{X}_t\bf{W}_{xo} + \bf{H}_{t-1}\bf{W}_{ho}+\bf{b}_o))$$
+- **internal state** $\bf{C}_t$ is calculated as $$\bf{C}_t = \bf{F}_t \odot \$$
 
 
 # Training Details
