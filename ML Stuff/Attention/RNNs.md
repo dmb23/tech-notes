@@ -54,10 +54,10 @@ To build "deep" RNNs the simple approach is to stack RNNs on top of each other: 
 
 - each *memory cell* has **internal state** $\bf{C}_t$ in addition to the hidden state $\bf{H}_t$ 
 - each *memory cell* learns **4** different computations:
-	- the **input node** calculates the candidate internal state $\tilde{\bf{C}}_t \in (-1, 1)$ $$\tilde{\bf{C}}_t = \tanh(\bf{X}_T\bf{W}_{xc} + \bf{H}_{t-1}\bf{W}_{hc} + \bf{b}_c)$$
-	- the **forget gate** $\bf{F}_t \in (0, 1)$ controls if the current value of the "memory" (= internal state) should be kept or deleted ("forgotten") $$\bf{F}_t = \sigma(\bf{X}_t\bf{W}_{xf} + \bf{H}_{t-1}\bf{W}_{hf}+\bf{b}_f))$$
-	- the **input gate** $\bf{I}_t \in (0, 1)$ controls if the candidate internal state should affect the "memory" (=be added tot he internal state) $$\bf{I}_t = \sigma(\bf{X}_t\bf{W}_{xi} + \bf{H}_{t-1}\bf{W}_{hi}+\bf{b}_i))$$
-	- the **output gate** $\bf{O}_t \in (0, 1)$ controls if the memory cell should impact the output of the current step based on its internal state or better rely more on the input alone $$\bf{O}_t = \sigma(\bf{X}_t\bf{W}_{xo} + \bf{H}_{t-1}\bf{W}_{ho}+\bf{b}_o))$$
+	- the **input node** calculates the candidate internal state $\tilde{\bf{C}}_t \in  \mathbb{R}^{n \times h}$ with values in $(-1, 1)$ $$\tilde{\bf{C}}_t = \tanh(\bf{X}_T\bf{W}_{xc} + \bf{H}_{t-1}\bf{W}_{hc} + \bf{b}_c)$$
+	- the **forget gate** $\bf{F}_t \in  \mathbb{R}^{n \times h}$ with values in $(0, 1)$ controls if the current value of the "memory" (= internal state) should be kept or deleted ("forgotten") $$\bf{F}_t = \sigma(\bf{X}_t\bf{W}_{xf} + \bf{H}_{t-1}\bf{W}_{hf}+\bf{b}_f))$$
+	- the **input gate** $\bf{I}_t \in  \mathbb{R}^{n \times h}$ with values in $(0, 1)$ controls if the candidate internal state should affect the "memory" (=be added tot he internal state) $$\bf{I}_t = \sigma(\bf{X}_t\bf{W}_{xi} + \bf{H}_{t-1}\bf{W}_{hi}+\bf{b}_i))$$
+	- the **output gate** $\bf{O}_t \in  \mathbb{R}^{n \times h}$ with values in $(0, 1)$ controls if the memory cell should impact the output of the current step based on its internal state or better rely more on the input alone $$\bf{O}_t = \sigma(\bf{X}_t\bf{W}_{xo} + \bf{H}_{t-1}\bf{W}_{ho}+\bf{b}_o))$$
 - **internal state** $\bf{C}_t$ is calculated as $$\bf{C}_t = \bf{F}_t \odot \bf{C}_{t-1} + \bf{I}_t \odot \tilde{\bf{C}}_t$$
 	- the forget gate controls the contribution of the internal state from the earlier time step
 	- the input gate controls the contribution of the candidate internal state
@@ -66,7 +66,21 @@ To build "deep" RNNs the simple approach is to stack RNNs on top of each other: 
 	- the output gate controls if the current memory impacts other layers of the network or not
 	- hidden state is is passed to both the next time step of the same memory cell and the downstream layers of the network!
 
+## GRU - Gated Recurrent Units
+Simplify the concepts of LSTM cells to get the same benefits with less computation. It only tracks hidden state (not an additional internal state) and learns only three (not four) calculations.
 
+![[GRU.png]]
+
+- each GRU learns 3 different computations:
+	- the **reset gate** $\bf{R}_t \in \mathbb{R}^{n \times h}$ with values in $(0,1)$ controls if we remember the hidden state of the last time step in the calculation of the candidate hidden state or not $$\bf{R}_t = \sigma(\bf{X}_t\bf{W}_{xr} + \bf{H}_{t-1}\bf{W}_{hr}+\bf{b}_r))$$
+	- the **update gate** $\bf{Z}_t \in \mathbb{R}^{n \times h}$ with values in $(0,1)$ controls how strongly the new hidden state is updated in this time step or kept as-is $$\bf{Z}_t = \sigma(\bf{X}_t\bf{W}_{xz} + \bf{H}_{t-1}\bf{W}_{hz}+\bf{b}_z))$$
+	- the **candidate hidden state** $\tilde{\bf{H}}_t \in \mathbb{R}^{n \times h}$ with values in $(-1, 1)$ is calculated using the reset gate: $$\tilde{\bf{H}}_t = \tanh (\bf{X}_t\bf{W}_{xh} + (\bf{R}_t \odot \bf{H}_{t-1})\bf{W}_{hh} + \bf{b}_h)$$
+		- for $\bf{R}_t = 1$ this calculates a vanilla RNN
+		- for $\bf{R}_t = 0$ this calculates an MLP with $\bf{X}_t$ as input, ignoring the hidden state
+- final **hidden state** is calculated using the update gate: $$\bf{H}_t = \bf{Z}_t \odot \bf{H}_{t-1} + (1-\bf{Z}_t) \odot \tilde{\bf{H}}_t $$
+	- for $\bf{Z}_t = 1$ the old state of the last time step is completely retained. This effectively ignores the information from $\bf{X}_t$ and skips time step $t$ in the dependency chain.
+	- for $\bf{Z}_t = 0$ the new hidden state is equal to the candidate hidden state.
+ 
 # Training Details
 
 ## Gradient Clipping
