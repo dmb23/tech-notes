@@ -194,10 +194,13 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "a802950939cad30b",
+  "active": "8e41461d45d0b5b1",
   "lastOpenFiles": [
-    "ML Stuff/Attention/Language Models.md",
+    "ML Stuff/images/Deep-RNN.png",
+    "ML Stuff/images/RNN-single-layer.png",
+    "ML Stuff/images",
     "ML Stuff/Attention/RNNs.md",
+    "ML Stuff/Attention/Language Models.md",
     "ML Stuff/Basics/Deep Learning 101.md",
     "ML Stuff/Basics/Fancy stuff.md",
     "Project Ideas/Project Board.md",
@@ -229,8 +232,6 @@
     "Tools/Nessie - Catalog for Data Lakes.md",
     "Web Services/Retool - Visual App Creation.md",
     "Paper",
-    "Web Services/brainboard - Visual Terraform Management.md",
-    "Resources",
-    "Web Services/Ploomber - App Deployment.md"
+    "Web Services/brainboard - Visual Terraform Management.md"
   ]
 }
