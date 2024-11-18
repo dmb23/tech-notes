@@ -45,6 +45,11 @@ To build "deep" RNNs the simple approach is to stack RNNs on top of each other: 
 
 # Modern RNN Cells
 ## LSTM - Long Short-Term Memory
+[[#Gradient Clipping]] can help with exploding gradients, but it did not solve vanishing gradients in deep networks. The intuition behind the name is
+- RNNs have *long-term memory* in the form of weights. They change slowly during training and encode general knowledge about data
+- RNNs have *short-term memory* in the form of activations that are passed from each node to the next time step
+- The *memory cell* introduces an intermediate type of storage
+
 
 
 # Training Details
