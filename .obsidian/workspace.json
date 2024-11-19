@@ -33,12 +33,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML Stuff/Attention/RNNs.md",
+                "file": "ML Stuff/Models to look at.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "RNNs"
+              "title": "Models to look at"
             }
           }
         ],
@@ -160,10 +160,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ML Stuff/Attention/RNNs.md"
+                "file": "ML Stuff/Models to look at.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of RNNs"
+              "title": "Outline of Models to look at"
             }
           },
           {
@@ -196,8 +196,10 @@
   },
   "active": "a802950939cad30b",
   "lastOpenFiles": [
-    "ML Stuff/images/GRU.png",
+    "ML Stuff/Running LLMs locally.md",
+    "ML Stuff/Models to look at.md",
     "ML Stuff/Attention/RNNs.md",
+    "ML Stuff/images/GRU.png",
     "ML Stuff/images/LSTM-memory-cell.png",
     "ML Stuff/images/Deep-RNN.png",
     "ML Stuff/images/RNN-single-layer.png",
@@ -211,7 +213,6 @@
     "Paper/Reproducible data science over data lakes - replayable datapipelines with Bauplan and Nessie.md",
     "Untitled Kanban.md",
     "Python Stuff/Managing Versions.md",
-    "ML Stuff/Running LLMs locally.md",
     "preamble.sty",
     "Resources/Information Resources.md",
     "ML Stuff/Basics",
