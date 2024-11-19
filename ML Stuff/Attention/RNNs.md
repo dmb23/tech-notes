@@ -88,7 +88,11 @@ Easiest way to achieve that is to stack two RNNs on top of each other for each l
 
 ![[bidirectional-RNN.png]]
 
-- 
+- Input $\bf{X}_t \in \mathbb{R}^{n \times d}$
+- forward hidden state $\overrightarrow{\bf{H}}_t \in \mathbb{R}^{n \times h}$ $$\overrightarrow{\bf{H}}_t = \phi(\bf{X}_t\bf{W}_{xh}^{(f)} + \overrightarrow{\bf{H}}_{t-1}\bf{W}_{hh}^{(f)} + \bf{b}_h^{(f)})$$
+- backward hidden state $\overleftarrow{\bf{H}}_t \in \mathbb{R}^{n \times h}$ $$\overleftarrow{\bf{H}}_t = \phi(\bf{X}_t\bf{W}_{xh}^{(b)} + \overleftarrow{\bf{H}}_{t+1}\bf{W}_{hh}^{(b)} + \bf{b}_h^{(b)})$$
+- hidden state $\bf{H}_t \in \mathbb{R}^{n \times 2h}$ as concatenation of $\overrightarrow{\bf{H}}_T$ and $\overleftarrow{\bf{H}}_T$.
+- If there are multiple bidirectional layers, then $\bf{H}_t$ is passed as input to the next layer, or used for the output $\bf{O}_t \in \mathbb{R}^{n \times m}$ $$\bf{O}_t = \bf{H}_t\bf{W}_{hm} + \bf{b}_m$$
 
 # Training Details
 
