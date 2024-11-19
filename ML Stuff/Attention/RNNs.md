@@ -80,7 +80,16 @@ Simplify the concepts of LSTM cells to get the same benefits with less computati
 - final **hidden state** is calculated using the update gate: $$\bf{H}_t = \bf{Z}_t \odot \bf{H}_{t-1} + (1-\bf{Z}_t) \odot \tilde{\bf{H}}_t $$
 	- for $\bf{Z}_t = 1$ the old state of the last time step is completely retained. This effectively ignores the information from $\bf{X}_t$ and skips time step $t$ in the dependency chain.
 	- for $\bf{Z}_t = 0$ the new hidden state is equal to the candidate hidden state.
- 
+
+# Bidirectional RNNs
+For tasks like "Fill in the middle", RNNs need to take into account the context of a sequence both before and after the token to predict.
+
+Easiest way to achieve that is to stack two RNNs on top of each other for each layer, on processing the sequence forward and one backward.
+
+![[bidirectional-RNN.png]]
+
+- 
+
 # Training Details
 
 ## Gradient Clipping
