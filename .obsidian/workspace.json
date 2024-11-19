@@ -33,12 +33,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML Stuff/Attention/Seq2Seq.md",
+                "file": "Project Ideas/Agents.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Seq2Seq"
+              "title": "Agents"
             }
           }
         ],
@@ -160,10 +160,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ML Stuff/Attention/Seq2Seq.md"
+                "file": "Project Ideas/Agents.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of Seq2Seq"
+              "title": "Outline of Agents"
             }
           },
           {
@@ -196,8 +196,9 @@
   },
   "active": "a802950939cad30b",
   "lastOpenFiles": [
-    "ML Stuff/Attention/RNNs.md",
     "ML Stuff/Attention/Seq2Seq.md",
+    "Project Ideas/Agents.md",
+    "ML Stuff/Attention/RNNs.md",
     "ML Stuff/images/bidirectional-RNN.png",
     "ML Stuff/Models to look at.md",
     "ML Stuff/Running LLMs locally.md",
@@ -235,7 +236,6 @@
     "Tools/DLT - Python-first data load tool.md",
     "Tools/Meltano - Open Source Data Integration.md",
     "Tools/Nessie - Catalog for Data Lakes.md",
-    "Web Services/Retool - Visual App Creation.md",
     "Paper"
   ]
 }
