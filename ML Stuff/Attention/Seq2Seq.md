@@ -24,11 +24,12 @@ Common applications are "Sequence to sequence", where input and output sequence 
 	- $y_1, \ldots, y_{T'}$ is the target output sequence for each time step $t'$
 	- the decoder transforms the output sequence, its hidden state and the context variable into the next hidden state $$\bf{h}^{(d)}_{t'} =\text{dec}(y_{t'-1}, \bf{c},\bf{h}^{(d)}_{t'-1})$$
 - Dimensions
-	- $\bf{X} \in \mathbb{R}^{4 \times 9}$ 
+	- $\bf{X} \in \mathbb{R}^{n \times T}$ 
 		- batch size $n = 4$
 		- sequence length $T = 9$
 		- each entry is the index of a token
-	- encoder is GRU architecture, $l=2$ layers, $h=16$ hidden units, embedding of input into $e$ dimensions
+	- **encoder** is GRU architecture, $l=2$ layers, $h=16$ hidden units, embedding of input into $e$ dimensions
 		- embed input as $\tilde{\bf{X}} \in \mathbb{R}^{T \times n \times e}$ 
 		- encode into hidden state $\bf{H}_T \in \mathbb{R}^{l \times n \times h}$
+		- take output of last layer as context $\bf{c} \in \mathbb{R}^{n \times h}$
 	- 
