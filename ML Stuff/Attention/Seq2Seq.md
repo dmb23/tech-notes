@@ -16,6 +16,9 @@ Common applications are "Sequence to sequence", where input and output sequence 
 
 - Concepts
 	- *teacher forcing* - during training the decoder gets the tokens of the target sequence up to the current time step $t'$ as input, while in prediction it will be the the tokens of the predicted sequence
+		- alternatively, the decoder can be fed its own predictions for autoregressive predictions, as would happen in inference
+	- *passing state* - the encoder transforms an input sequence of variable length into a fixed-shape context variable $\bf{c}$. This variable can be fed to the decoder in each timestep, it can also be used just once for initialization of the decoder hidden state.
+	- *embedding layer* - token indices are translated into feature vectors of specified dimension (independent of the vocabulary size). This can also learn to map semantically similar tokens / sequences to similar regions in the vector space.
 - Variables
 	- single sequence example, batch size 1
 	- $x_1, \ldots, x_T$ is the input sequence, $x_t$ is the $t^\text{th}$ token, $\bf{x}_t$ the equivalent feature vector
