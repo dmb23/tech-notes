@@ -196,11 +196,12 @@
   },
   "active": "a802950939cad30b",
   "lastOpenFiles": [
+    "ML Stuff/images/Attention-calculation.png",
+    "ML Stuff/Attention/Attention.md",
     "ML Stuff/Attention/Seq2Seq.md",
     "ML Stuff/Attention/Scores.md",
     "ML Stuff/Attention/Language Models.md",
     "ML Stuff/Attention/RNNs.md",
-    "ML Stuff/Attention/Attention.md",
     "Project Ideas/Agents.md",
     "ML Stuff/Basics/Fancy stuff.md",
     "ML Stuff/Basics/Deep Learning 101.md",
@@ -235,7 +236,6 @@
     "Python Stuff",
     "ML Stuff",
     "Tools/DLT - Python-first data load tool.md",
-    "Tools/Meltano - Open Source Data Integration.md",
     "Paper"
   ]
 }
