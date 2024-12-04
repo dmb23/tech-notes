@@ -27,12 +27,28 @@ Common applications are "Sequence to sequence", where input and output sequence 
 	- $y_1, \ldots, y_{T'}$ is the target output sequence for each time step $t'$
 	- the decoder transforms the output sequence, its hidden state and the context variable into the next hidden state $$\bf{h}^{(d)}_{t'} =\text{dec}(y_{t'-1}, \bf{c},\bf{h}^{(d)}_{t'-1})$$
 - Dimensions
+	- $\bf{V} \in \mathbb{N}$ size of vocabulary
 	- $\bf{X} \in \mathbb{R}^{n \times T}$ 
 		- batch size $n = 4$
 		- sequence length $T = 9$
 		- each entry is the index of a token
 	- **encoder** is GRU architecture, $l=2$ layers, $h=16$ hidden units, embedding of input into $e$ dimensions
 		- embed input as $\tilde{\bf{X}} \in \mathbb{R}^{T \times n \times e}$ 
-		- encode into hidden state $\bf{H}_T \in \mathbb{R}^{l \times n \times h}$
+		- encode into hidden state $\bf{H}^{(e)}_T \in \mathbb{R}^{l \times n \times h}$
 		- take output of last layer as context $\bf{c} \in \mathbb{R}^{n \times h}$
-	- 
+	- **decoder** uses same architecture, so it can be initialized with the hidden state of the encoder. A final fully connected layer predicts output tokens
+		- embed input as $\tilde{\bf{X}} \in \mathbb{R}^{T \times n \times e}$ 
+		- take context from encoder output of last layer, last step $\bf{c} \in \mathbb{R}^{n \times h}$
+			- broadcast to all timesteps $\tilde{\bf{c}} \in \mathbb{R}^{T \times n \times h}$
+		- concatenate as $\bf{X_c} \in \mathbb{R}^{T \times n \times (e+h)}$
+		- encode into hidden state $\bf{H}^{(d)}_T \in \mathbb{R}^{l \times n \times h}$
+		- calculate output via last dense layer $\bf{o} \in \mathbb{R}^{n \times T \times V}$
+
+
+# Strategies
+
+## Loss function with masking
+
+When training on batches, sequences are padded to the same length. The padding tokens should be excluded from the calculation of the loss function, so the loss function should be masked on those tokens.
+
+## 

@@ -48,8 +48,7 @@ It should be possible to model word probabilities by frequency approximations fr
 
 
 # Perplexity
-- we can calculate the cross-entropy loss averaged over all tokens of a sequence to have a measure of how well the model is encoding this sequence: $$\frac{1}{n}\sum_{t=1}^n - \log P(x_t | x_{t-1}, \ldots, x_1)$$
-- NLP prefers **perplexity**, the exponential of that quantity: $$\exp \left(\frac{1}{n}\sum_{t=1}^n - \log P(x_t | x_{t-1}, \ldots, x_1)\right)$$
+see [[Scores#Perplexity]]
 
 # Partitioning Sequences
 If you have a corpus with number of tokens $T$, and want to train on sequence pairs (input - target) of fixed length $n$:
