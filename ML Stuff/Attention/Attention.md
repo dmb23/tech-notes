@@ -40,6 +40,11 @@ Dropping terms of a gaussian kernel that are bounded leads to the dot product. N
 - attention function $$a(\bf{q}, \bf{k}_i) = \bf{q}^\intercal\bf{k}_i / \sqrt{d}$$
 - attention weights are normalized via softmax $$\alpha(\bf{q}, \bf{k}_i) = \text{softmax}(a(\bf{q}, \bf{k}_i))$$
 > for **different dimensions** between queries and keys, it is possible to construct a matrix to address the mismatch: $\bf{q}^\intercal \bf{Mk}$
+
+> [!WARNING]
+> This attention mechanism does not have any trainable weights!
+
+
 ### Additive Attention
 
 *Additive Attention* is a different attention scoring function with two advantages:
@@ -57,4 +62,31 @@ Additive Attention can be interpreted as a two-layer MLP with tanh as activation
 
 ## Bahdanau Attention Mechanism in Seq2Seq models
 ![[Bahdanau-attention.png]]
+
+> [!HINT] Key Idea
+> Dynamically update the context variable $\bf{c}$ as a function of the original text (encoder hidden state $\bf{h}^{(e)}$) and the text that was already generated (decoder hidden state $\bf{h}^{(d)}$)
+
+- Given an input sequence of length $T$
+- at each decoding time step $t'$ update the context $$\bf{c}_{t'} = \sum_{t=1}^T \alpha(\bf{h}_{t'-1}^{(d)}, \bf{h}_t^{(e)}\bf{h}_t^{(e)}$$
+	- query is decoder hidden state of last time step $\bf{h}_{t'-1}^{(d)}$
+	- keys are the encoder hidden states of all input sequence steps $\bf{h}_{t}^{(e)}$
+	- values are also the encoder hidden states
+- this context $\bf{c}_{t'}$ is then used to calculate new decoder state $\bf{h}_{t'}^{(d)}$ and to generate a new token
+
+A possible extension is to not stop at $T$ but proceed to $t'-1$ in the attention sum, and take the already generated tokens in the decoder as further context.
+
+
+## Multi-head attention
+
+![[multihead-attention.png]]
+
+> [!HINT] Key Idea
+> Multiple Attention Mechanisms might be able to capture different dependencies (e.g. short-range vs longer-range). So let's combine them
+
+- learn different attention weights and combine them:
+	- each attention pooling output is called a head
+- to allow the heads to learn different features, transform queries, keys, and values by a linear projection (fully-connected layer)
+- final output is another linear projection on the concatenation of all attention head outputs
+
+**NOTE:** This allows also to use [[#scaled dot product attention]] and learn the layer.
 
