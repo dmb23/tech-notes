@@ -33,12 +33,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML Stuff/Attention/Scores.md",
+                "file": "ML Stuff/Attention/Attention.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Scores"
+              "title": "Attention"
             }
           }
         ],
@@ -160,10 +160,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ML Stuff/Attention/Scores.md"
+                "file": "ML Stuff/Attention/Attention.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of Scores"
+              "title": "Outline of Attention"
             }
           },
           {
@@ -196,9 +196,9 @@
   },
   "active": "a802950939cad30b",
   "lastOpenFiles": [
-    "ML Stuff/Attention/Language Models.md",
-    "ML Stuff/Attention/Scores.md",
     "ML Stuff/Attention/Seq2Seq.md",
+    "ML Stuff/Attention/Scores.md",
+    "ML Stuff/Attention/Language Models.md",
     "ML Stuff/Attention/RNNs.md",
     "ML Stuff/Attention/Attention.md",
     "Project Ideas/Agents.md",

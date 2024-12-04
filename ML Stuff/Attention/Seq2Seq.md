@@ -51,4 +51,19 @@ Common applications are "Sequence to sequence", where input and output sequence 
 
 When training on batches, sequences are padded to the same length. The padding tokens should be excluded from the calculation of the loss function, so the loss function should be masked on those tokens.
 
-## 
+## Sequence Prediction
+
+How to extract the final sequence from the token-level probabilities that are provided by the model?
+
+- **Greedy Search**
+	- Always take the token with the highest probability next.
+- **Exhaustive Search**
+	- Calculate all scores of all possible sequences. Take the best.
+	- Prohibitive in terms of calculation
+- **Beam Search**
+	- Search a number of $k$ beams in parallel
+	- In each step: 
+		- explore all possible continuations of the existing sequences
+		- select the $k$ best sequences from all those combinations
+	- Possible candidates in step $t$ can be dropped in step $t+1$, if no continuation is in the best $k$ samples overall
+
