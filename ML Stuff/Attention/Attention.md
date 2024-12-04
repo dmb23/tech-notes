@@ -2,7 +2,7 @@
 Database $D$ with keys $k$ and values $v$ 
 e.g. {("Lastname", "Firstname"), ("Eggerton", "Egon")} - When you search (or query $q$) for "Eggerton" you get "Egon", when you search for "Lama" you get no answer, or you get an approximate match "Lastname"
 
-## Attention
+## Attention - Basic Concept
 
 *attention pooling* just creates a linear combination of the values by some interaction between the query and the keys
 
@@ -29,6 +29,32 @@ This can be done by
 - normalize the resulting matrix
 - multiply the weight matrix with training labels `y_train`
 
-### scaled dot product attention (cheaper kernel)
+## Attention Scoring Functions
+### scaled dot product attention
 
-Make things faster and cheaper to calculate. Drop terms
+Make kernels faster and cheaper to calculate. For queries and keys of the same length, this leads to the dot product attention.
+
+Dropping terms of a gaussian kernel that are bounded leads to the dot product. Normalize the variance by accounting for the input dimension. 
+- query $\bf{q} \in \mathbb{R}^d$
+- key $\bf{k}_i \in \mathbb{R}^d$
+- attention function $$a(\bf{q}, \bf{k}_i) = \bf{q}^\intercal\bf{k}_i / \sqrt{d}$$
+- attention weights are normalized via softmax $$\alpha(\bf{q}, \bf{k}_i) = \text{softmax}(a(\bf{q}, \bf{k}_i))$$
+> for **different dimensions** between queries and keys, it is possible to construct a matrix to address the mismatch: $\bf{q}^\intercal \bf{Mk}$
+### Additive Attention
+
+*Additive Attention* is a different attention scoring function with two advantages:
+1. it works for queries and keys with different dimensions
+2. the attention is additive, which can save on computations
+
+- query $\bf{q} \in \mathbb{R}^q$
+- key $\bf{k}_i \in \mathbb{R}^k$
+- additive attention scoring function $$a(\bf{q}, \bf{k}_i) = \bf{w}_v^\intercal \tanh(\bf{W}_qq + \bf{W}_kk) \in \mathbb{R} $$ with hidden dimension $h$ and learnable parameters
+	- $\bf{W}_q \in \mathbb{R}^{h \times q}$
+	- $\bf{W}_k \in \mathbb{R}^{h \times k}$
+	- $\bf{w}_v \in \mathbb{R}^h$
+
+Additive Attention can be interpreted as a two-layer MLP with tanh as activation and no bias terms.
+
+## Bahdanau Attention Mechanism in Seq2Seq models
+![[Bahdanau-attention.png]]
+
