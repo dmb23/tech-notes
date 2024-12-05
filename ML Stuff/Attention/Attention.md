@@ -90,3 +90,22 @@ A possible extension is to not stop at $T$ but proceed to $t'-1$ in the attentio
 
 **NOTE:** This allows also to use [[#scaled dot product attention]] and learn the layer.
 
+
+## Self-Attention
+
+> [!HINT] Key Idea
+> Given a sequence of tokens, this sequence can be used as all **key, query** and **value** in attention pooling.
+
+The self-attention of a sequence $\bf{x}_1, \ldots, \bf{x}_n$ outputs a sequence of the same length $\bf{y}_1, \ldots, \bf{y}_n$, where $$\bf{y}_i = f(\bf{x}_i, D) \qquad \text{where } D = (\bf{x}_1, \bf{x}_1), \ldots, (\bf{x}_n, \bf{x}_n)$$
+- self-attention can be computed in parallel for a full sequence, the need for sequential processing as in RNNs is lost
+- computation increases quadratically with sequence length, making long sequences expensive (prohibitive?)
+
+### Positional Encoding
+
+Self-Attention can attend to different parts of the input sequence, but does not have any information about the order of the tokens.
+
+This information can be added by positional encodings.
+- positional encodings can be learned, or calculated as fixed values
+- e.g. sin/cos frequencies of the position with different frequencies
+- positional encodings are added to the input embeddings
+	- positional encodings must be of the same dimension as the embeddings
