@@ -1,3 +1,4 @@
+# Basics
 ##### Simile: Database
 Database $D$ with keys $k$ and values $v$ 
 e.g. {("Lastname", "Firstname"), ("Eggerton", "Egon")} - When you search (or query $q$) for "Eggerton" you get "Egon", when you search for "Lama" you get no answer, or you get an approximate match "Lastname"
@@ -29,6 +30,68 @@ This can be done by
 - normalize the resulting matrix
 - multiply the weight matrix with training labels `y_train`
 
+## Bahdanau Attention Mechanism in Seq2Seq models
+![[Bahdanau-attention.png]]
+
+> [!HINT] Key Idea
+> Dynamically update the context variable $\bf{c}$ as a function of the original text (encoder hidden state $\bf{h}^{(e)}$) and the text that was already generated (decoder hidden state $\bf{h}^{(d)}$)
+
+- Given an input sequence of length $T$
+- at each decoding time step $t'$ update the context $$\bf{c}_{t'} = \sum_{t=1}^T \alpha(\bf{h}_{t'-1}^{(d)}, \bf{h}_t^{(e)}\bf{h}_t^{(e)}$$
+	- query is decoder hidden state of last time step $\bf{h}_{t'-1}^{(d)}$
+	- keys are the encoder hidden states of all input sequence steps $\bf{h}_{t}^{(e)}$
+	- values are also the encoder hidden states
+- this context $\bf{c}_{t'}$ is then used to calculate new decoder state $\bf{h}_{t'}^{(d)}$ and to generate a new token
+
+A possible extension is to not stop at $T$ but proceed to $t'-1$ in the attention sum, and take the already generated tokens in the decoder as further context.
+
+# Applied Concepts
+
+## Multi-head attention
+
+![[multihead-attention.png]]
+
+> [!HINT] Key Idea
+> Multiple Attention Mechanisms might be able to capture different dependencies (e.g. short-range vs longer-range). So let's combine them
+
+- learn different attention weights and combine them:
+	- each attention pooling output is called a head
+- to allow the heads to learn different features, transform queries, keys, and values by a linear projection (fully-connected layer) 
+	- $\text{Attention}(\bm{Q}, \bm{K}, \bm{V}) = \text{softmax}\left(\frac{\bm{QK}^{\intercal}}{\sqrt{d_k}}\right)\bm{V}$
+	- Matrices $\bm{W}_k, \bm{W}_q$ convert the embeddings to keys / queries
+		- this can learn different concepts to attend to
+		- this tranforms from high embedding dimensions $n_e (=12228)$ to lower key/query dimensions $n_k (=128)$ 
+	- Matrix $\bm{W}_V$ converts the embeddings to value vectors, that give the update to a target value if this value should be attended to
+		- This means: when attending to the token "blue", you don't add the weighted embedding of the token itself, but a (weighted) calculated embedding-difference for this token, which is learned
+		- In practice: This matrix should go from $n_e \rightarrow n_e$, which would create a order of magnitude more parameters than the other matrixes.
+			- Instead: calculate it as a "low-rank transformation"  $\bm{W}_V = \bm{W}_{V,\uparrow}\bm{W}_{V,\downarrow}$  so an embedding vector gets conceptually first transformed into a low-dimensional intermediate vector, which is then transformed back into the embedding space:
+				- $\bm{W}_V \in \mathtt{R}^{n_e \times n_e}$
+				- $\bm{W}_{V,\uparrow} \in \mathtt{R}^{n_e \times n_k}$
+				- $\bm{W}_{V,\downarrow} \in \mathtt{R}^{n_k \times n_e}$
+- final output is another linear projection on the concatenation of all attention head outputs
+
+**NOTE:** This allows also to use [[#scaled dot product attention]] and learn the layer.
+
+## Self-Attention
+
+> [!HINT] Key Idea
+> Given a sequence of tokens, this sequence can be used as all **key, query** and **value** in attention pooling.
+
+The self-attention of a sequence $\bf{x}_1, \ldots, \bf{x}_n$ outputs a sequence of the same length $\bf{y}_1, \ldots, \bf{y}_n$, where $$\bf{y}_i = f(\bf{x}_i, D) \qquad \text{where } D = (\bf{x}_1, \bf{x}_1), \ldots, (\bf{x}_n, \bf{x}_n)$$
+- self-attention can be computed in parallel for a full sequence, the need for sequential processing as in RNNs is lost
+- computation increases quadratically with sequence length, making long sequences expensive (prohibitive?)
+
+## Positional Encoding
+
+Self-Attention can attend to different parts of the input sequence, but does not have any information about the order of the tokens.
+
+This information can be added by positional encodings.
+- positional encodings can be learned, or calculated as fixed values
+- e.g. sin/cos frequencies of the position with different frequencies
+- positional encodings are added to the input embeddings
+	- positional encodings must be of the same dimension as the embeddings
+
+
 ## Attention Scoring Functions
 ### scaled dot product attention
 
@@ -42,7 +105,9 @@ Dropping terms of a gaussian kernel that are bounded leads to the dot product. N
 > for **different dimensions** between queries and keys, it is possible to construct a matrix to address the mismatch: $\bf{q}^\intercal \bf{Mk}$
 
 > [!WARNING]
-> This attention mechanism does not have any trainable weights!
+> This attention mechanism does not have any trainable weights in itself!
+> 
+> It is normally used with Multi-head attention and the corresponding linear transformations of queries, keys and values.
 
 
 ### Additive Attention
@@ -59,53 +124,3 @@ Dropping terms of a gaussian kernel that are bounded leads to the dot product. N
 	- $\bf{w}_v \in \mathbb{R}^h$
 
 Additive Attention can be interpreted as a two-layer MLP with tanh as activation and no bias terms.
-
-## Bahdanau Attention Mechanism in Seq2Seq models
-![[Bahdanau-attention.png]]
-
-> [!HINT] Key Idea
-> Dynamically update the context variable $\bf{c}$ as a function of the original text (encoder hidden state $\bf{h}^{(e)}$) and the text that was already generated (decoder hidden state $\bf{h}^{(d)}$)
-
-- Given an input sequence of length $T$
-- at each decoding time step $t'$ update the context $$\bf{c}_{t'} = \sum_{t=1}^T \alpha(\bf{h}_{t'-1}^{(d)}, \bf{h}_t^{(e)}\bf{h}_t^{(e)}$$
-	- query is decoder hidden state of last time step $\bf{h}_{t'-1}^{(d)}$
-	- keys are the encoder hidden states of all input sequence steps $\bf{h}_{t}^{(e)}$
-	- values are also the encoder hidden states
-- this context $\bf{c}_{t'}$ is then used to calculate new decoder state $\bf{h}_{t'}^{(d)}$ and to generate a new token
-
-A possible extension is to not stop at $T$ but proceed to $t'-1$ in the attention sum, and take the already generated tokens in the decoder as further context.
-
-
-## Multi-head attention
-
-![[multihead-attention.png]]
-
-> [!HINT] Key Idea
-> Multiple Attention Mechanisms might be able to capture different dependencies (e.g. short-range vs longer-range). So let's combine them
-
-- learn different attention weights and combine them:
-	- each attention pooling output is called a head
-- to allow the heads to learn different features, transform queries, keys, and values by a linear projection (fully-connected layer)
-- final output is another linear projection on the concatenation of all attention head outputs
-
-**NOTE:** This allows also to use [[#scaled dot product attention]] and learn the layer.
-
-
-## Self-Attention
-
-> [!HINT] Key Idea
-> Given a sequence of tokens, this sequence can be used as all **key, query** and **value** in attention pooling.
-
-The self-attention of a sequence $\bf{x}_1, \ldots, \bf{x}_n$ outputs a sequence of the same length $\bf{y}_1, \ldots, \bf{y}_n$, where $$\bf{y}_i = f(\bf{x}_i, D) \qquad \text{where } D = (\bf{x}_1, \bf{x}_1), \ldots, (\bf{x}_n, \bf{x}_n)$$
-- self-attention can be computed in parallel for a full sequence, the need for sequential processing as in RNNs is lost
-- computation increases quadratically with sequence length, making long sequences expensive (prohibitive?)
-
-### Positional Encoding
-
-Self-Attention can attend to different parts of the input sequence, but does not have any information about the order of the tokens.
-
-This information can be added by positional encodings.
-- positional encodings can be learned, or calculated as fixed values
-- e.g. sin/cos frequencies of the position with different frequencies
-- positional encodings are added to the input embeddings
-	- positional encodings must be of the same dimension as the embeddings
