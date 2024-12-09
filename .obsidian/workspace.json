@@ -33,16 +33,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML Stuff/Attention/Attention.md",
+                "file": "ML Stuff/Attention/04 - Attention.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Attention"
+              "title": "04 - Attention"
+            }
+          },
+          {
+            "id": "b0d247dc511705fc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "05 - Architectures.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "05 - Architectures"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -160,10 +174,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ML Stuff/Attention/Attention.md"
+                "file": "05 - Architectures.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of Attention"
+              "title": "Outline of 05 - Architectures"
             }
           },
           {
@@ -194,16 +208,18 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "a802950939cad30b",
+  "active": "b0d247dc511705fc",
   "lastOpenFiles": [
+    "ML Stuff/images/transformer architecture.png",
+    "05 - Architectures.md",
+    "ML Stuff/Attention/04 - Attention.md",
+    "ML Stuff/Attention/03 - Seq2Seq.md",
+    "ML Stuff/Attention/02 - RNNs.md",
+    "ML Stuff/Attention/01 - Language Models.md",
     "ML Stuff/images/multihead-attention.png",
-    "ML Stuff/Attention/Attention.md",
     "ML Stuff/images/Bahdanau-attention.png",
     "ML Stuff/images/Attention-calculation.png",
-    "ML Stuff/Attention/Seq2Seq.md",
     "ML Stuff/Attention/Scores.md",
-    "ML Stuff/Attention/Language Models.md",
-    "ML Stuff/Attention/RNNs.md",
     "Project Ideas/Agents.md",
     "ML Stuff/Basics/Fancy stuff.md",
     "ML Stuff/Basics/Deep Learning 101.md",
@@ -237,7 +253,6 @@
     "ML Stuff/Fireworks.ai - cheap inference & training.md",
     "Python Stuff",
     "ML Stuff",
-    "Tools/DLT - Python-first data load tool.md",
     "Paper"
   ]
 }
