@@ -47,7 +47,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "05 - Architectures.md",
+                "file": "ML Stuff/Attention/05 - Architectures.md",
                 "mode": "source",
                 "source": false
               },
@@ -174,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "05 - Architectures.md"
+                "file": "ML Stuff/Attention/05 - Architectures.md"
               },
               "icon": "lucide-list",
               "title": "Outline of 05 - Architectures"
@@ -208,10 +208,10 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "b0d247dc511705fc",
+  "active": "8e41461d45d0b5b1",
   "lastOpenFiles": [
     "ML Stuff/images/transformer architecture.png",
-    "05 - Architectures.md",
+    "ML Stuff/Attention/05 - Architectures.md",
     "ML Stuff/Attention/04 - Attention.md",
     "ML Stuff/Attention/03 - Seq2Seq.md",
     "ML Stuff/Attention/02 - RNNs.md",
