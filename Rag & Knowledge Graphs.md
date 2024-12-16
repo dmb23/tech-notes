@@ -47,3 +47,21 @@
 	- but that means to put the full corpus into the LLM context, and distill it over multiple calls...
 
 # LightRAG
+
+## Pipeline
+
+### Indexing
+
+- Chunk
+- Extract Entities and relationships
+- generate Keys & a summarizing text paragraph for each entity / relationship
+- deduplicate and merge the key / values
+
+### Query
+
+- extract *local* and *global* keywords from the query
+	- high-level keywords focus on overarching concepts or themes
+	- low-level keywords focus on specific entities, details, or concrete terms
+- match low-level keywords to entities (via VectorDB)
+- match high-level keywords to relationships (via VectorDB) ???
+- possibly add one-hop neighboring nodes from the graph
