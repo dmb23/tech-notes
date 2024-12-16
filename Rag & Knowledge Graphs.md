@@ -33,4 +33,17 @@
 
 #### Query
 
-1. 
+1. For each level of communities:
+	1. shuffle and distribute community summaries randomly into chunks of specified size
+	2. Generate intermediate answers in parallel, one for each chunk
+		1. generate a score between 0-100 to evaluate how helpful the answer is for the original question
+	3. fill the highest-ranked intermediate answers until token limit into context. Then create global answer.
+
+## Conclusion
+
+- Super expensive! Thousands of LLM calls in Index creation, exponentially growing calls in answer creation
+- not a huge benefit in their own evaluations ...
+- Apparently running the divide-and-conquer approach on original text chunks gave quite good results
+	- but that means to put the full corpus into the LLM context, and distill it over multiple calls...
+
+# LightRAG
