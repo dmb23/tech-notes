@@ -59,9 +59,16 @@
 
 ### Query
 
-- extract *local* and *global* keywords from the query
+- extract *local* and *global* keywords from the query via LLM prompt
 	- high-level keywords focus on overarching concepts or themes
 	- low-level keywords focus on specific entities, details, or concrete terms
 - match low-level keywords to entities (via VectorDB)
-- match high-level keywords to relationships (via VectorDB) ???
+- match high-level keywords to relationships (via VectorDB)
+
 - possibly add one-hop neighboring nodes from the graph
+
+1. query relationships by global keywords
+2. sort relationships by
+	1. "edge degree": sum of connections from both connected nodes
+	2. "weight": estimate of the LLM given in edge creation
+3. 
