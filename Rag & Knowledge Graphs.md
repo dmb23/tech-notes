@@ -59,16 +59,29 @@
 
 ### Query
 
-- extract *local* and *global* keywords from the query via LLM prompt
+- extract two types of keywords from the query via LLM prompt
 	- high-level keywords focus on overarching concepts or themes
 	- low-level keywords focus on specific entities, details, or concrete terms
-- match low-level keywords to entities (via VectorDB)
-- match high-level keywords to relationships (via VectorDB)
+- Pick the query type:
+	- `naive` match query embedding to chunks
+	- `local` match low-level keywords to entities (via VectorDB)
+		- should help to find answers for concrete questions
+	- `global` match high-level keywords to relationships (via VectorDB)
+		- should help to find answers for abstract questions
+	- `hybrid` combine local & global
 
-- possibly add one-hop neighboring nodes from the graph
+#####  example: `global` process
 
-1. query relationships by global keywords
-2. sort relationships by
-	1. "edge degree": sum of connections from both connected nodes
-	2. "weight": estimate of the LLM given in edge creation
-3. 
+1. extract relationships
+	1. query relationships by global keywords
+	2. sort relationships by
+		1. "edge degree": sum of connections from both connected nodes
+		2. "weight": estimate of the LLM given in edge creation
+	3. truncate according to token limit
+2. extract nodes according to relationships
+	1. get src & target nodes from sorted relationships
+	2. truncate list of nodes according to token limit
+3. extract text chunks according to relationships
+	1. each relationship is matched to a source chunk
+	2. truncate
+4. Throw all results as csv into the context of the prompt 
