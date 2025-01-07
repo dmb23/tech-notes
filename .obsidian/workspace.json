@@ -61,12 +61,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML Stuff/Attention/05 - Architectures.md",
+                "file": "Project Ideas/podrag.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "05 - Architectures"
+              "title": "podrag"
             }
           }
         ],
@@ -188,10 +188,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ML Stuff/Attention/05 - Architectures.md"
+                "file": "Project Ideas/podrag.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of 05 - Architectures"
+              "title": "Outline of podrag"
             }
           },
           {
@@ -224,11 +224,12 @@
   },
   "active": "239333f78cafa7b1",
   "lastOpenFiles": [
+    "ML Stuff/Attention/05 - Architectures.md",
+    "Project Ideas/podrag.md",
     "ML Stuff/Rag & Knowledge Graphs.md",
     "ML Stuff/images/GraphRAG-overview.png",
     "ML Stuff/Running LLMs locally.md",
     "Project Ideas/Project Board.md",
-    "ML Stuff/Attention/05 - Architectures.md",
     "ML Stuff/images/transformer architecture.png",
     "ML Stuff/Attention/04 - Attention.md",
     "ML Stuff/Attention/03 - Seq2Seq.md",
