@@ -9,15 +9,24 @@ flowchart LR
 	p("`**Person**
 	- name
 	`")
-	t("`**Topics**`")
-	e("`**Episode**`")
+	t("`**Topics**
+	- name`")
+	e("`**Episode**
+	- id
+	- podcast
+	- title`")
 	s("`**Snippet**
+	- id
 	- embedding
 	- type [chunk/summary]`")
-	p -->|"`TAKE_PART`"| e
-	e -->|"`DISCUSS`"| t
-	s -->|"`DISCUSS`"| t
-	s -->|"`FROM`"| e
+	f("`**FullText**
+	- content`")
+	p -->|"`TAKES_PART`"| e
+	e -->|"`DISCUSSES`"| t
+	s -->|"`DISCUSSES`"| t
+	s -->|"`APPEARS_IN`"| e
+	s -->|"`HAS_CONTENT`"| f
+	e -->|"`HAS_CONTENT`"| f
 ```
 
 ### Vector Index on Embeddings:
