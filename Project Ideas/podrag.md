@@ -5,15 +5,17 @@ create an efficient RAG engine to answer not only concrete questions about podca
 ## Graph Model
 
 ```mermaid
-flowchart LR
-	p("`**Person**
+flowchart
+	pn("`**Person**
+	- name
+	`")
+	pod("`**podcast**
 	- name
 	`")
 	t("`**Topics**
 	- name`")
 	e("`**Episode**
 	- id
-	- podcast
 	- title`")
 	s("`**Snippet**
 	- id
@@ -21,7 +23,9 @@ flowchart LR
 	- type [chunk/summary]`")
 	f("`**FullText**
 	- content`")
-	p -->|"`TAKES_PART`"| e
+	pn -->|"`HOSTS`"| pod
+	pn -->|"`TAKES_PART`"| e
+	pod -->|"`PROVIDES`"| e
 	e -->|"`DISCUSSES`"| t
 	s -->|"`DISCUSSES`"| t
 	s -->|"`APPEARS_IN`"| e
