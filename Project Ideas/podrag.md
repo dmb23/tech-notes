@@ -22,6 +22,7 @@ flowchart
 	- embedding
 	- type [chunk/summary]`")
 	f("`**FullText**
+	- id
 	- content`")
 	pn -->|"`HOSTS`"| pod
 	pn -->|"`TAKES_PART`"| e
