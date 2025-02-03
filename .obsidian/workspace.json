@@ -89,7 +89,8 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -188,7 +189,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Project Ideas/podrag.md"
+                "file": "Project Ideas/podrag.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-list",
               "title": "Outline of podrag"
