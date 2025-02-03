@@ -1,6 +1,8 @@
-TAKucreate an efficient RAG engine to answer not only concrete questions about podcasts, but also asbtract / general / summarization questions
+create an efficient RAG engine to answer not only concrete questions about podcasts, but also asbtract / general / summarization questions
 
 ## Ideas
+
+
 
 ## Graph Model
 
