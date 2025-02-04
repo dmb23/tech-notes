@@ -61,12 +61,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Project Ideas/podrag.md",
+                "file": "ML Stuff/Idea - generate synthetic data.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "podrag"
+              "title": "Idea - generate synthetic data"
             }
           }
         ],
@@ -189,13 +189,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Project Ideas/podrag.md",
+                "file": "ML Stuff/Idea - generate synthetic data.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of podrag"
+              "title": "Outline of Idea - generate synthetic data"
             }
           },
           {
@@ -228,10 +228,11 @@
   },
   "active": "239333f78cafa7b1",
   "lastOpenFiles": [
-    "Project Ideas/Project Board.md",
-    "Project Ideas/podrag.md",
-    "ML Stuff/Attention/05 - Architectures.md",
     "ML Stuff/Rag & Knowledge Graphs.md",
+    "ML Stuff/Idea - generate synthetic data.md",
+    "Project Ideas/podrag.md",
+    "Project Ideas/Project Board.md",
+    "ML Stuff/Attention/05 - Architectures.md",
     "ML Stuff/images/GraphRAG-overview.png",
     "ML Stuff/Running LLMs locally.md",
     "ML Stuff/images/transformer architecture.png",
@@ -270,7 +271,6 @@
     "dRAGtor.md",
     "Commandline Magic/NVIM",
     "Commandline Magic",
-    "ML Stuff/HowTo - Fine tune Llama3.1.md",
     "Python Stuff",
     "ML Stuff",
     "Paper"
