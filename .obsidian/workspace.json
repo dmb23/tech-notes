@@ -68,21 +68,9 @@
               "icon": "lucide-file",
               "title": "Idea - generate synthetic data"
             }
-          },
-          {
-            "id": "0acf81ee55aa1135",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.8.7"
-              },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.8.7"
-            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -201,12 +189,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "ML Stuff/Idea - generate synthetic data.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of Idea - generate synthetic data"
             }
           },
           {
@@ -237,7 +226,7 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "0acf81ee55aa1135",
+  "active": "239333f78cafa7b1",
   "lastOpenFiles": [
     "ML Stuff/Idea - generate synthetic data.md",
     "Untitled.md",
