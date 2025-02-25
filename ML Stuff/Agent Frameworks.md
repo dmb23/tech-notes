@@ -1,8 +1,9 @@
 #  LangGraph
 
 # LlamaIndex
-Generally: Rely on nested composition of Abstractions
 
+- Rely on nested composition of Abstractions
+- Abstract many things far far away
 ```python
 index = VectorStoreIndex()
 retriever = VectorIndexRetriever(index=index)
@@ -13,8 +14,10 @@ query_engine = RetrieverQueryEngine(
 )
 
 response = query_engine.query("What is love?")
-# assert(response == "Bab)
+# assert(response == "Baby don't hurt me!")
 ```
+
+### LlamaIndex - Agents
 
 - [AgentClasses](https://docs.llamaindex.ai/en/stable/module_guides/deploying/agents/) & [Tools](https://docs.llamaindex.ai/en/stable/module_guides/deploying/agents/tools/)
 	- blackbox classes, `agent.chat()`
