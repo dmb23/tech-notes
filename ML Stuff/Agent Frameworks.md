@@ -1,5 +1,8 @@
 #  LangGraph
 
+- sister project to langchain
+- 
+
 # LlamaIndex
 
 - Rely on nested composition of Abstractions
@@ -26,6 +29,7 @@ response = query_engine.query("What is love?")
 	- routers, query transformations, sub questions
 - [Workflow](https://docs.llamaindex.ai/en/stable/understanding/workflows/) 
 	- event-driven flow control instead of DAGs
+		- steps are connected via input/output
 	- global context
 	- based on pure python & type annotations (?)
 
