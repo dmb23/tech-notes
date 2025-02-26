@@ -96,6 +96,8 @@ response = query_engine.query("What is love?")
 
 - Code Agents (write Python instead of JSON of method name and arguments)
 - low amount of abstraction
+- observability via OpenTelemetry 
+	- initialize it once, then forget (?)
 
 # PydanticAI
 
