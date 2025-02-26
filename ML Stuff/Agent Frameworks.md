@@ -101,3 +101,34 @@ response = query_engine.query("What is love?")
 
 # PydanticAI
 
+- USP:
+	- Type Safety
+	- Dependency Injection
+	- -> Easy debugging
+- Targeted at Production Level
+- Focused on type definitions
+- Allows for different Workflows:
+	- Agents
+	- Multi-Agents (Agents in Tools)
+	- Graph (`pydantic-graph`, independent sister project)
+```python
+@dataclass
+class Deps:
+	openai: AsyncOpenAI
+	retriever: MyVectorRetriever
+
+rag_agent = Agent('openai:gpt-40', deps_type=Deps)
+
+@rag_agent.tool
+async def retrieve(context: RunContext[Deps], search_query: str) -> str:
+	"""..."""
+	embeddings = context.deps.openai.embeddings.create(search_query)
+	docs = context.deps.retriever.retrieve(embeddings)
+	return "\n\n".join(docs)
+
+if __name__ == "__main__":
+	openai = AsyncOpenAI()
+	deps = Deps(openai=openai, retriever = MyVectorRetriever())
+	
+	
+```
