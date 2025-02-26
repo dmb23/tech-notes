@@ -9,9 +9,13 @@ loader = PyPDFLoader(file_path)
 docs = loader.load()
 text_splitter = RecursiveCharacterTextSplitter()
 splits = text_splitter.split_documents(docs)
-embeddings = OpenAIEmbeddings(model="text-embedding-3-large")
+embeddings = HuggingFacembeddings(model_name="sentence-transformers/all-mpnet-base-v2")
 vector_store = InMemoryVectorStore(embeddings)
-ids = vector_store.add_documents(documents=all_splits)
+_ = vector_store.add_documents(documents=all_splits)
+
+prompt = hub.pull("rlm/rag-prompt")
+retrieved_docs = vector_store.similarity_search(question)
+
 ```
 ### Agents in LangGraph
 
