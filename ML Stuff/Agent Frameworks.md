@@ -1,6 +1,7 @@
 # LangChain /  LangGraph
 
-- Abstract interfaces for common usage (chat model, retriever, tools, ...)
+- Abstract interfaces for common usage for different providers (chat model, retriever, tools, ...)
+- prompts are first class citizens
 - lots of options from big community
 - feels very "scripty"
 
@@ -14,8 +15,15 @@ vector_store = InMemoryVectorStore(embeddings)
 _ = vector_store.add_documents(documents=all_splits)
 
 prompt = hub.pull("rlm/rag-prompt")
-retrieved_docs = vector_store.similarity_search(question)
 
+retrieved_docs = vector_store.similarity_search(question)
+docs_content = "\n\n".join(doc.page_content for doc in retrieved_docs)
+messages = prompt.invoke({"question": question, "context": docs_content})
+
+llm = init_chat_model("claude-3-5-sonnet-latests", model_provider="anthropic")
+response = llm.invoke(messages)
+
+print(response.content)
 ```
 ### Agents in LangGraph
 
@@ -24,7 +32,7 @@ retrieved_docs = vector_store.similarity_search(question)
 		- easy interrupts, debugging, human-in-the-loop, time-travel
 	- first-class streaming support
 - langserve / langsmith as paid services
-- 
+- graphs defined via nodes / edges
 
 # LlamaIndex
 
