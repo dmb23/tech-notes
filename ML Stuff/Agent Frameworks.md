@@ -104,20 +104,29 @@ response = query_engine.query("What is love?")
 - USP:
 	- Type Safety
 	- Dependency Injection
-	- -> Easy debugging
-- Targeted at Production Level
-- Focused on type definitions
+		- for Prompts, Tools, Result Validators
+	- -> Good debugging
+	- Async is first option
+- Targeted at Production Level - higher level of complexity and safety
+- Lots of Typing
 - Allows for different Workflows:
 	- Agents
 	- Multi-Agents (Agents in Tools)
 	- Graph (`pydantic-graph`, independent sister project)
+
+
 ```python
 @dataclass
 class Deps:
 	openai: AsyncOpenAI
 	retriever: MyVectorRetriever
 
-rag_agent = Agent('openai:gpt-40', deps_type=Deps)
+rag_agent = Agent(
+	'openai:gpt-40',
+	 deps_type=Deps,
+	 result_type=str,
+	 system_prompt="...",	 
+)
 
 @rag_agent.tool
 async def retrieve(context: RunContext[Deps], search_query: str) -> str:
@@ -126,9 +135,14 @@ async def retrieve(context: RunContext[Deps], search_query: str) -> str:
 	docs = context.deps.retriever.retrieve(embeddings)
 	return "\n\n".join(docs)
 
-if __name__ == "__main__":
+async def run_agent(question: str):
 	openai = AsyncOpenAI()
 	deps = Deps(openai=openai, retriever = MyVectorRetriever())
-	
-	
+	answer = await agent.run(question, deps=deps)
+	print(answer.data)
+
+
+if __name__ == "_main__":
+	question = "What is Love?"
+	asyncio.run(run_agent(question))
 ```
