@@ -1,0 +1,6 @@
+- finish the library overview for the brownbag session
+- write a simple brownbag agent
+	- HackerNews API, Jina Reader as tools
+- train a model to select which questions are meta and which can be answered directly (podrag)
+- write a more elaborate brownbag agent
+	- https://jina.ai/news/a-practical-guide-to-implementing-deepsearch-deepresearch/

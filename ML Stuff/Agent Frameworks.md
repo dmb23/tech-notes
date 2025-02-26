@@ -1,3 +1,28 @@
+# Agents - quick overview
+
+> [!Info] What are AI Agents?
+> AI Agents are programs where LLM outputs control the workflow
+
+|Agency Level|Description|How that’s called|Example Pattern|
+|---|---|---|---|
+|☆☆☆|LLM output has no impact on program flow|Simple Processor|`process_llm_output(llm_response)`|
+|★☆☆|LLM output determines an if/else switch|Router|`if llm_decision(): path_a() else: path_b()`|
+|★★☆|LLM output determines function execution|Tool Caller|`run_function(llm_chosen_tool, llm_chosen_args)`|
+|★★★|LLM output controls iteration and program continuation|Multi-step Agent|`while llm_should_continue(): execute_next_step()`|
+|★★★|One agentic workflow can start another agentic workflow|Multi-Agent|`if llm_trigger(): execute_agent()`|
+
+
+>[!warning] When to use agents
+>Only when you absolutely have to!
+
+## Agent libraries
+
+Goals:
+- easy parsing of tool calling
+- memory of what happened before (multi-step agent)
+- error logging, retries, ...
+
+
 # LangChain /  LangGraph
 
 - Abstract interfaces for common usage for different providers (chat model, retriever, tools, ...)
@@ -18,12 +43,12 @@ prompt = hub.pull("rlm/rag-prompt")
 
 retrieved_docs = vector_store.similarity_search(question)
 docs_content = "\n\n".join(doc.page_content for doc in retrieved_docs)
-messages = prompt.invoke({"question": question, "context": docs_content})
+messages = prompt.invoke({"question": "What is love?", "context": docs_content})
 
 llm = init_chat_model("claude-3-5-sonnet-latests", model_provider="anthropic")
 response = llm.invoke(messages)
 
-print(response.content)
+# assert(response.content == "Baby don't hurt me!")
 ```
 ### Agents in LangGraph
 
@@ -66,11 +91,11 @@ response = query_engine.query("What is love?")
 	- based on pure python & type annotations (?)
 
 
-Overall: 
-- high level of abstraction
-- many options provided, but strict adherence to abstractions
 
 # SmolAgents
+
+- Code Agents (write Python instead of JSON of method name and arguments)
+- low amount of abstraction
 
 # PydanticAI
 

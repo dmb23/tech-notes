@@ -11,20 +11,14 @@
             "id": "7860a2b77df22a05",
             "type": "leaf",
             "state": {
-              "type": "kanban",
+              "type": "markdown",
               "state": {
-                "file": "Project Ideas/Project Board.md",
-                "kanbanViewState": {
-                  "kanban-plugin": "board",
-                  "list-collapse": [
-                    false,
-                    false,
-                    false
-                  ]
-                }
+                "file": "ML Stuff/Agent Frameworks.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-trello",
-              "title": "Project Board"
+              "icon": "lucide-file",
+              "title": "Agent Frameworks"
             }
           },
           {
@@ -69,8 +63,7 @@
               "title": "Agent Frameworks"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -127,8 +120,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "35b0ee6e568b5c58",
@@ -228,15 +220,17 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "239333f78cafa7b1",
+  "active": "7860a2b77df22a05",
   "lastOpenFiles": [
-    "ML Stuff/Idea - generate synthetic data.md",
+    "Project Ideas/00_ideas.md",
+    "Project Ideas/podrag.md",
+    "Project Ideas/Agents.md",
+    "Project Ideas/Project Board.md",
     "ML Stuff/Agent Frameworks.md",
+    "ML Stuff/Idea - generate synthetic data.md",
     "Untitled.md",
     "Untitled",
     "ML Stuff/Rag & Knowledge Graphs.md",
-    "Project Ideas/podrag.md",
-    "Project Ideas/Project Board.md",
     "ML Stuff/Attention/05 - Architectures.md",
     "ML Stuff/images/GraphRAG-overview.png",
     "ML Stuff/Running LLMs locally.md",
@@ -249,7 +243,6 @@
     "ML Stuff/images/Bahdanau-attention.png",
     "ML Stuff/images/Attention-calculation.png",
     "ML Stuff/Attention/Scores.md",
-    "Project Ideas/Agents.md",
     "ML Stuff/Basics/Fancy stuff.md",
     "ML Stuff/Basics/Deep Learning 101.md",
     "ML Stuff/images/bidirectional-RNN.png",
@@ -271,7 +264,6 @@
     "ML Stuff/Flux.1 Image Generation Model.md",
     "ML Stuff/Attention",
     "Commandline Magic/NVIM/NVim.md",
-    "Commandline Magic/lazygit.md",
     "Commandline Magic/NVIM",
     "Commandline Magic",
     "Python Stuff",
