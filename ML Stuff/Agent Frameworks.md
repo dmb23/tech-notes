@@ -1,3 +1,6 @@
+
+---
+
 # Agents - quick overview
 
 > [!Info] What are AI Agents?
@@ -15,6 +18,8 @@
 >[!warning] When to use agents
 >Only when you absolutely have to!
 
+---
+
 ## Agent libraries
 
 Goals:
@@ -22,7 +27,11 @@ Goals:
 - memory of what happened before (multi-step agent)
 - error logging, retries, ...
 
-
+Selection:
+- LangGraph ![langgraphlogo | 150](https://langchain-ai.github.io/langgraph/static/wordmark_dark.svg)
+- LlamaIndex
+- smolagents (HF)
+- pydantic-ai
 # LangChain /  LangGraph
 
 - Abstract interfaces for common usage for different providers (chat model, retriever, tools, ...)
