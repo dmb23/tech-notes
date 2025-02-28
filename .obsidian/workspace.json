@@ -15,7 +15,7 @@
               "state": {
                 "file": "ML Stuff/Agent Frameworks.md",
                 "mode": "source",
-                "source": false
+                "source": true
               },
               "icon": "lucide-file",
               "title": "Agent Frameworks"
@@ -61,6 +61,22 @@
               },
               "icon": "lucide-file",
               "title": "Agent Frameworks"
+            }
+          }
+        ]
+      },
+      {
+        "id": "fe5f2433ee959131",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7b9040d994413a59",
+            "type": "leaf",
+            "state": {
+              "type": "reveal-preview-view",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Slide Preview"
             }
           }
         ]
@@ -116,11 +132,13 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "35b0ee6e568b5c58",
@@ -183,8 +201,8 @@
               "type": "outline",
               "state": {
                 "file": "ML Stuff/Agent Frameworks.md",
-                "followCursor": false,
-                "showSearch": false,
+                "followCursor": true,
+                "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
@@ -206,7 +224,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -216,7 +235,8 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "obsidian-kanban:Create new board": false
+      "obsidian-kanban:Create new board": false,
+      "obsidian-advanced-slides:Show Slide Preview": false
     }
   },
   "active": "7860a2b77df22a05",

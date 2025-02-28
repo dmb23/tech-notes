@@ -1,10 +1,18 @@
-
+---
+theme: moon
+width: 1800
+height: 1200
 ---
 
 # Agents - quick overview
 
-> [!Info] What are AI Agents?
+> [!note] What are AI Agents?
 > AI Agents are programs where LLM outputs control the workflow
+
+>[!warning] When to use agents
+>Only when you absolutely have to!
+
+---
 
 |Agency Level|Description|How that’s called|Example Pattern|
 |---|---|---|---|
@@ -14,24 +22,25 @@
 |★★★|LLM output controls iteration and program continuation|Multi-step Agent|`while llm_should_continue(): execute_next_step()`|
 |★★★|One agentic workflow can start another agentic workflow|Multi-Agent|`if llm_trigger(): execute_agent()`|
 
-
->[!warning] When to use agents
->Only when you absolutely have to!
-
 ---
 
 ## Agent libraries
 
-Goals:
+*Why libraries instead of raw LLM calls?*
+
 - easy parsing of tool calling
 - memory of what happened before (multi-step agent)
 - error logging, retries, ...
 
-Selection:
-- LangGraph ![langgraphlogo | 150](https://langchain-ai.github.io/langgraph/static/wordmark_dark.svg)
-- LlamaIndex
-- smolagents (HF)
-- pydantic-ai
+*Selection:*
+
+- LangGraph
+- LlamaIndex 
+- smolagents (HF) 
+- pydantic-ai 
+
+---
+
 # LangChain /  LangGraph
 
 - Abstract interfaces for common usage for different providers (chat model, retriever, tools, ...)
@@ -59,6 +68,8 @@ response = llm.invoke(messages)
 
 # assert(response.content == "Baby don't hurt me!")
 ```
+
+---
 ### Agents in LangGraph
 
 - USP:
@@ -68,10 +79,13 @@ response = llm.invoke(messages)
 - langserve / langsmith as paid services
 - graphs defined via nodes / edges
 
+---
+
 # LlamaIndex
 
 - Rely on nested composition of Abstractions
 - Abstract many things far far away
+
 ```python
 documents = SimpleDirectoryReader("./data").load_data()
 index = VectorStoreIndex.from_documents(documents)
@@ -86,6 +100,7 @@ response = query_engine.query("What is love?")
 # assert(response == "Baby don't hurt me!")
 ```
 
+---
 ### LlamaIndex - Agents
 
 - [AgentClasses](https://docs.llamaindex.ai/en/stable/module_guides/deploying/agents/) & [Tools](https://docs.llamaindex.ai/en/stable/module_guides/deploying/agents/tools/)
@@ -99,14 +114,18 @@ response = query_engine.query("What is love?")
 	- global context
 	- based on pure python & type annotations (?)
 
-
+---
 
 # SmolAgents
 
 - Code Agents (write Python instead of JSON of method name and arguments)
 - low amount of abstraction
+- Easy to get started quickly
+- good connection to HF Hub (store & reuse tools / agents)
 - observability via OpenTelemetry 
 	- initialize it once, then forget (?)
+
+---
 
 # PydanticAI
 
@@ -117,12 +136,12 @@ response = query_engine.query("What is love?")
 	- -> Good debugging
 	- Async is first option
 - Targeted at Production Level - higher level of complexity and safety
-- Lots of Typing
 - Allows for different Workflows:
 	- Agents
 	- Multi-Agents (Agents in Tools)
 	- Graph (`pydantic-graph`, independent sister project)
 
+---
 
 ```python
 @dataclass
