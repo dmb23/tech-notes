@@ -64,22 +64,6 @@
             }
           }
         ]
-      },
-      {
-        "id": "fe5f2433ee959131",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "7b9040d994413a59",
-            "type": "leaf",
-            "state": {
-              "type": "reveal-preview-view",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Slide Preview"
-            }
-          }
-        ]
       }
     ],
     "direction": "vertical"
