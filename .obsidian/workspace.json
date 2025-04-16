@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML Stuff/Idea - generate synthetic data.md",
+                "file": "ML Stuff/Ideas/Idea - tips to improve multi-agent systems.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Idea - generate synthetic data"
+              "title": "Idea - tips to improve multi-agent systems"
             }
           },
           {
@@ -223,12 +223,14 @@
   },
   "active": "7860a2b77df22a05",
   "lastOpenFiles": [
+    "ML Stuff/Ideas/Idea - generate synthetic data.md",
+    "ML Stuff/Ideas/Idea - tips to improve multi-agent systems.md",
+    "ML Stuff/Ideas",
     "ML Stuff/Agent Frameworks.md",
     "Project Ideas/00_ideas.md",
     "Project Ideas/podrag.md",
     "Project Ideas/Agents.md",
     "Project Ideas/Project Board.md",
-    "ML Stuff/Idea - generate synthetic data.md",
     "Untitled.md",
     "Untitled",
     "ML Stuff/Rag & Knowledge Graphs.md",
@@ -264,10 +266,8 @@
     "Isiyana PR review.md",
     "ML Stuff/Flux.1 Image Generation Model.md",
     "ML Stuff/Attention",
-    "Commandline Magic/NVIM/NVim.md",
     "Commandline Magic/NVIM",
     "Commandline Magic",
-    "Python Stuff",
-    "ML Stuff"
+    "Python Stuff"
   ]
 }
