@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML Stuff/Agent Frameworks.md",
+                "file": "ML Stuff/Idea - generate synthetic data.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Agent Frameworks"
+              "title": "Idea - generate synthetic data"
             }
           },
           {
@@ -116,8 +116,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -224,11 +223,11 @@
   },
   "active": "7860a2b77df22a05",
   "lastOpenFiles": [
+    "ML Stuff/Agent Frameworks.md",
     "Project Ideas/00_ideas.md",
     "Project Ideas/podrag.md",
     "Project Ideas/Agents.md",
     "Project Ideas/Project Board.md",
-    "ML Stuff/Agent Frameworks.md",
     "ML Stuff/Idea - generate synthetic data.md",
     "Untitled.md",
     "Untitled",
