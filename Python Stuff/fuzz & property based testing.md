@@ -1,0 +1,6 @@
+- [ ] write a function to sort a list
+- [ ] write a function to sort a pd.Dataframe
+- [ ] write some manual tests
+- [ ] write fuzz tests for the list sorting
+- [ ] write property based tests for the dataframe?
+- [ ] write fuzz & property based tests for the dataframe?

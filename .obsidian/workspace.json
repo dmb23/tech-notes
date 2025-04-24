@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML Stuff/Ideas/Idea - tips to improve multi-agent systems.md",
+                "file": "Python Stuff/fuzz & property based testing.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Idea - tips to improve multi-agent systems"
+              "title": "fuzz & property based testing"
             }
           },
           {
@@ -223,8 +223,10 @@
   },
   "active": "7860a2b77df22a05",
   "lastOpenFiles": [
-    "ML Stuff/Ideas/Idea - generate synthetic data.md",
+    "Python Stuff/Managing Versions.md",
+    "Python Stuff/fuzz & property based testing.md",
     "ML Stuff/Ideas/Idea - tips to improve multi-agent systems.md",
+    "ML Stuff/Ideas/Idea - generate synthetic data.md",
     "ML Stuff/Ideas",
     "ML Stuff/Agent Frameworks.md",
     "Project Ideas/00_ideas.md",
@@ -259,12 +261,10 @@
     "Project Ideas",
     "Paper/Reproducible data science over data lakes - replayable datapipelines with Bauplan and Nessie.md",
     "Untitled Kanban.md",
-    "Python Stuff/Managing Versions.md",
     "preamble.sty",
     "Resources/Information Resources.md",
     "ML Stuff/Basics",
     "Isiyana PR review.md",
-    "ML Stuff/Flux.1 Image Generation Model.md",
     "ML Stuff/Attention",
     "Commandline Magic/NVIM",
     "Commandline Magic",
