@@ -223,8 +223,9 @@
   },
   "active": "7860a2b77df22a05",
   "lastOpenFiles": [
-    "Python Stuff/Managing Versions.md",
+    "ML Stuff/Attention/04 - Attention.md",
     "Python Stuff/fuzz & property based testing.md",
+    "Python Stuff/Managing Versions.md",
     "ML Stuff/Ideas/Idea - tips to improve multi-agent systems.md",
     "ML Stuff/Ideas/Idea - generate synthetic data.md",
     "ML Stuff/Ideas",
@@ -240,7 +241,6 @@
     "ML Stuff/images/GraphRAG-overview.png",
     "ML Stuff/Running LLMs locally.md",
     "ML Stuff/images/transformer architecture.png",
-    "ML Stuff/Attention/04 - Attention.md",
     "ML Stuff/Attention/03 - Seq2Seq.md",
     "ML Stuff/Attention/02 - RNNs.md",
     "ML Stuff/Attention/01 - Language Models.md",
