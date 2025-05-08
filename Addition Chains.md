@@ -8,8 +8,13 @@ given an integer (bigbigbig ??? 2 ** 128 ???)
 - until you arrive at the number
 - goal: the shorter the better
 
+formal definition (maybe softer than we use): https://mathworld.wolfram.com/LucasChain.html
+
 
 ### anderer stuff:
 - original introduction for something else: https://cr.yp.to/ecdh/diffchain-20060219.pdf
 - recent algorithms: https://eprint.iacr.org/2024/1044.pdf
 # Approach
+- give a few examples
+- give access to a db / cache with integer -> triplet
+- give access to a `check_my_lucas_chain`
