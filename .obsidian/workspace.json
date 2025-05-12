@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DJ Bernstein - Differential addition chains.md",
+                "file": "Searching for differential addition chains.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "DJ Bernstein - Differential addition chains"
+              "title": "Searching for differential addition chains"
             }
           },
           {
@@ -254,7 +254,7 @@
   "active": "4bd2e75be474a1cb",
   "lastOpenFiles": [
     "Addition Chains/General Introduction.md",
-    "DJ Bernstein - Differential addition chains.md",
+    "Searching for differential addition chains.md",
     "Addition Chains",
     "Python Stuff/fuzz & property based testing.md",
     "ML Stuff/Attention/04 - Attention.md",
