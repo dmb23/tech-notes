@@ -41,7 +41,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Searching for differential addition chains.md",
+                "file": "Addition Chains/Searching for differential addition chains.md",
                 "mode": "source",
                 "source": false
               },
@@ -149,8 +149,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "35b0ee6e568b5c58",
@@ -253,21 +252,29 @@
   },
   "active": "4bd2e75be474a1cb",
   "lastOpenFiles": [
+    "Addition Chains/dacbench-20240609/tally.py",
+    "Addition Chains/dacbench-20240609/sibc.py",
+    "Addition Chains/dacbench-20240609/primes.py",
+    "Addition Chains/dacbench-20240609/prune.py",
+    "Addition Chains/dacbench-20240609/prac.py",
+    "Addition Chains/dacbench-20240609/mitm2.py",
+    "Addition Chains/dacbench-20240609/plot.py",
+    "Addition Chains/dacbench-20240609/mitm.py",
+    "Addition Chains/dacbench-20240609/ladder.py",
+    "Addition Chains/dacbench-20240609/gcd.py",
+    "Addition Chains/dacbench-20240609/dac.py",
     "Addition Chains/General Introduction.md",
-    "Searching for differential addition chains.md",
-    "Addition Chains",
+    "Addition Chains/Searching for differential addition chains.md",
     "Python Stuff/fuzz & property based testing.md",
     "ML Stuff/Attention/04 - Attention.md",
     "Python Stuff/Managing Versions.md",
     "ML Stuff/Ideas/Idea - tips to improve multi-agent systems.md",
     "ML Stuff/Ideas/Idea - generate synthetic data.md",
-    "ML Stuff/Ideas",
     "ML Stuff/Agent Frameworks.md",
     "Project Ideas/00_ideas.md",
     "Project Ideas/podrag.md",
     "Project Ideas/Agents.md",
     "Project Ideas/Project Board.md",
-    "Untitled",
     "ML Stuff/Rag & Knowledge Graphs.md",
     "ML Stuff/Attention/05 - Architectures.md",
     "ML Stuff/images/GraphRAG-overview.png",
@@ -288,16 +295,8 @@
     "ML Stuff/images/LSTM-memory-cell.png",
     "ML Stuff/images/Deep-RNN.png",
     "ML Stuff/images/RNN-single-layer.png",
-    "ML Stuff/images",
     "Project Ideas/goask - Podcast Information in Golang.md",
-    "Project Ideas",
     "Paper/Reproducible data science over data lakes - replayable datapipelines with Bauplan and Nessie.md",
-    "Untitled Kanban.md",
-    "preamble.sty",
-    "Resources/Information Resources.md",
-    "ML Stuff/Basics",
-    "ML Stuff/Attention",
-    "Commandline Magic/NVIM",
-    "Commandline Magic"
+    "Untitled Kanban.md"
   ]
 }
