@@ -1,0 +1,4 @@
+- load data from 8a.nu
+	- possibly: leverage a VLM & browser use to evade the hassle of clean crawling?
+- use duckdb & dbt to transform the data
+- use superset to create dashboards?

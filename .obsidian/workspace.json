@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Addition Chains/Searching for differential addition chains.md",
+                "file": "Project Ideas/data engineering fun.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Searching for differential addition chains"
+              "title": "data engineering fun"
             }
           },
           {
@@ -240,6 +240,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -252,6 +253,10 @@
   },
   "active": "4bd2e75be474a1cb",
   "lastOpenFiles": [
+    "Project Ideas/00_ideas.md",
+    "Project Ideas/data engineering fun.md",
+    "Resources/Information Resources.md",
+    "Addition Chains/Searching for differential addition chains.md",
     "Addition Chains/dacbench-20240609/tally.py",
     "Addition Chains/dacbench-20240609/sibc.py",
     "Addition Chains/dacbench-20240609/primes.py",
@@ -262,16 +267,13 @@
     "Addition Chains/dacbench-20240609/mitm.py",
     "Addition Chains/dacbench-20240609/ladder.py",
     "Addition Chains/dacbench-20240609/gcd.py",
-    "Addition Chains/dacbench-20240609/dac.py",
     "Addition Chains/General Introduction.md",
-    "Addition Chains/Searching for differential addition chains.md",
     "Python Stuff/fuzz & property based testing.md",
     "ML Stuff/Attention/04 - Attention.md",
     "Python Stuff/Managing Versions.md",
     "ML Stuff/Ideas/Idea - tips to improve multi-agent systems.md",
     "ML Stuff/Ideas/Idea - generate synthetic data.md",
     "ML Stuff/Agent Frameworks.md",
-    "Project Ideas/00_ideas.md",
     "Project Ideas/podrag.md",
     "Project Ideas/Agents.md",
     "Project Ideas/Project Board.md",
@@ -296,7 +298,6 @@
     "ML Stuff/images/Deep-RNN.png",
     "ML Stuff/images/RNN-single-layer.png",
     "Project Ideas/goask - Podcast Information in Golang.md",
-    "Paper/Reproducible data science over data lakes - replayable datapipelines with Bauplan and Nessie.md",
-    "Untitled Kanban.md"
+    "Paper/Reproducible data science over data lakes - replayable datapipelines with Bauplan and Nessie.md"
   ]
 }
