@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tools/Crush.md",
+                "file": "Tools/obsidian.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Crush"
+              "title": "obsidian"
             }
           },
           {
@@ -253,10 +253,11 @@
   },
   "active": "4bd2e75be474a1cb",
   "lastOpenFiles": [
-    "Project Ideas/data engineering fun.md",
     "Tools/Crush.md",
-    "Project Ideas/00_ideas.md",
+    "Tools/obsidian.md",
     "Resources/Information Resources.md",
+    "Project Ideas/data engineering fun.md",
+    "Project Ideas/00_ideas.md",
     "Addition Chains/Searching for differential addition chains.md",
     "Addition Chains/dacbench-20240609/tally.py",
     "Addition Chains/dacbench-20240609/sibc.py",
@@ -297,7 +298,6 @@
     "ML Stuff/images/GRU.png",
     "ML Stuff/images/LSTM-memory-cell.png",
     "ML Stuff/images/Deep-RNN.png",
-    "ML Stuff/images/RNN-single-layer.png",
-    "Project Ideas/goask - Podcast Information in Golang.md"
+    "ML Stuff/images/RNN-single-layer.png"
   ]
 }
